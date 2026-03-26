@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 # --- Configurações básicas ---
 app.config["SECRET_KEY"] = "troque-por-uma-chave-bem-segura"
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///estatistica.db"
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///instance/estatistica.db"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db.init_app(app)
