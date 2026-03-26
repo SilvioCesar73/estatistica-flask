@@ -1,0 +1,235 @@
+{
+  "nome": "ANOVA de uma via",
+  "descricao": "A ANOVA de uma via (Análise de Variância) compara as médias de três ou mais grupos independentes. Neste exemplo, avaliamos se diferentes formatos de simulação clínica resultam em desempenho clínico distinto entre estudantes de enfermagem.",
+  "tipo": "Paramétrico",
+  "requisitos": [
+    "Variável numérica contínua",
+    "Distribuição aproximadamente normal em cada grupo",
+    "Homogeneidade das variâncias",
+    "Observações independentes"
+  ],
+  "quando_usar": "Quando se deseja comparar a média de três ou mais grupos independentes, como diferentes abordagens de simulação.",
+  "exemplo": "Três turmas de estudantes participaram de metodologias distintas: ensino tradicional (controle), simulação com debriefing estruturado e simulação com briefing + debriefing avançado. Os escores de desempenho clínico foram comparados para verificar diferenças entre as abordagens.",
+  "instrumento": {
+    "tipo": "Checklist de desempenho clínico pós-simulação",
+    "itens": [
+      "Avaliação do raciocínio clínico",
+      "Comunicação com o paciente",
+      "Segurança do paciente",
+      "Execução técnica das intervenções",
+      "Trabalho em equipe"
+    ],
+    "escore_final": "Soma dos itens, variando de 0 a 10 pontos"
+  },
+  "dados_exemplo": [
+    {
+      "grupo": "Controle",
+      "nota": 6.6
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.2
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.7
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.8
+    },
+    {
+      "grupo": "Controle",
+      "nota": 5.9
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.1
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.5
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.4
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.5
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.2
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.8
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.7
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.5
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.8
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.6
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.0
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.4
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.0
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.6
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.3
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.2
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.1
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.7
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.3
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.2
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.2
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.5
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.4
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.4
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 7.4
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 8.6
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 7.9
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 7.8
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 7.8
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 8.2
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 8.3
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 8.0
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 7.7
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 7.8
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 8.2
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 8.2
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 8.2
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 7.8
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 8.1
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 8.0
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "F",
+    "valor_estatistica": 151.57,
+    "p_valor": "< 0,001",
+    "itens_destaque": [
+      {
+        "rotulo": "Graus de liberdade",
+        "valor": "2 e 42"
+      },
+      {
+        "rotulo": "Média do controle",
+        "valor": "6,49"
+      },
+      {
+        "rotulo": "Média da simulação com debriefing",
+        "valor": "7,31"
+      },
+      {
+        "rotulo": "Média da simulação com briefing + debriefing",
+        "valor": "8,04"
+      },
+      {
+        "rotulo": "Eta²",
+        "valor": "0,88"
+      }
+    ]
+  },
+  "interpretacao": "As médias não ficaram distribuídas de forma semelhante entre os três grupos. O valor de eta² indica que grande parte da variação dos escores foi explicada pelo tipo de estratégia pedagógica neste exemplo.",
+  "planilha_exemplo": "teste_anova_simulacao.xlsx"
+}

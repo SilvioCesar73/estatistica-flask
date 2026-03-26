@@ -1,0 +1,99 @@
+{
+  "nome": "Regressão múltipla ajustada",
+  "descricao": "Exemplo de regressão linear múltipla com ajuste por variável de confusão, destacando a diferença entre associação bruta e associação ajustada.",
+  "tipo": "Modelo paramétrico ajustado",
+  "requisitos": [
+    "Desfecho contínuo",
+    "Preditores relevantes clinicamente",
+    "Variável de ajuste plausível",
+    "Avaliação da colinearidade e dos resíduos"
+  ],
+  "quando_usar": "Quando o pesquisador quer estimar o efeito de um preditor principal controlando possíveis confundidores.",
+  "exemplo": "Analisou-se a nota final no cenário de sepse segundo participação em debriefing estruturado, ajustando a análise pela experiência clínica prévia do estudante.",
+  "instrumento": {
+    "tipo": "Checklist final + autorrelato de experiência prévia",
+    "itens": [
+      "Participação em debriefing estruturado",
+      "Meses de experiência em estágio",
+      "Nota final no cenário"
+    ],
+    "escore_final": "Desfecho contínuo em pontos."
+  },
+  "dados_exemplo": [
+    {
+      "debriefing": 1,
+      "meses_experiencia": 2,
+      "nota": 6.6
+    },
+    {
+      "debriefing": 0,
+      "meses_experiencia": 2,
+      "nota": 6.1
+    },
+    {
+      "debriefing": 1,
+      "meses_experiencia": 3,
+      "nota": 6.9
+    },
+    {
+      "debriefing": 0,
+      "meses_experiencia": 3,
+      "nota": 6.3
+    },
+    {
+      "debriefing": 1,
+      "meses_experiencia": 4,
+      "nota": 7.2
+    },
+    {
+      "debriefing": 0,
+      "meses_experiencia": 4,
+      "nota": 6.5
+    },
+    {
+      "debriefing": 1,
+      "meses_experiencia": 5,
+      "nota": 7.6
+    },
+    {
+      "debriefing": 0,
+      "meses_experiencia": 5,
+      "nota": 6.8
+    },
+    {
+      "debriefing": 1,
+      "meses_experiencia": 6,
+      "nota": 7.9
+    },
+    {
+      "debriefing": 0,
+      "meses_experiencia": 6,
+      "nota": 7.0
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "β ajustado do debriefing",
+    "valor_estatistica": "0,72",
+    "p_valor": "0,002",
+    "itens_destaque": [
+      {
+        "rotulo": "IC 95% de β ajustado",
+        "valor": "0,34 a 1,10"
+      },
+      {
+        "rotulo": "β experiência prévia",
+        "valor": "0,18"
+      },
+      {
+        "rotulo": "R² ajustado",
+        "valor": "0,89"
+      },
+      {
+        "rotulo": "n",
+        "valor": "10"
+      }
+    ]
+  },
+  "interpretacao": "Mesmo após o ajuste pela experiência prévia, o debriefing estruturado permaneceu associado a melhor nota final. Isso reforça que o efeito observado não dependeu apenas do nível prévio de experiência.",
+  "planilha_exemplo": "regressao_multipla_ajustada_simulacao.xlsx"
+}

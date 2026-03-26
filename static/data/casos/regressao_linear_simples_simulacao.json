@@ -1,0 +1,95 @@
+{
+  "nome": "Regressão linear simples",
+  "descricao": "A regressão linear simples estima quanto um desfecho contínuo muda quando um único preditor varia. Aqui, avaliamos como o tempo de estudo se relaciona com a nota final em simulação.",
+  "tipo": "Modelo paramétrico de predição",
+  "requisitos": [
+    "Desfecho contínuo",
+    "Relação aproximadamente linear entre X e Y",
+    "Independência das observações",
+    "Resíduos sem padrão importante"
+  ],
+  "quando_usar": "Quando se deseja prever um desfecho contínuo com base em um único preditor.",
+  "exemplo": "Em uma disciplina de simulação clínica, registrou-se o número de horas de estudo autônomo antes da atividade e a nota obtida no checklist final.",
+  "instrumento": {
+    "tipo": "Checklist de desempenho clínico (0 a 10 pontos)",
+    "itens": [
+      "Priorização clínica",
+      "Tomada de decisão",
+      "Comunicação",
+      "Segurança do paciente",
+      "Execução técnica"
+    ],
+    "escore_final": "Nota final contínua de 0 a 10 pontos."
+  },
+  "dados_exemplo": [
+    {
+      "horas_estudo": 2,
+      "nota": 5.6
+    },
+    {
+      "horas_estudo": 3,
+      "nota": 5.9
+    },
+    {
+      "horas_estudo": 4,
+      "nota": 6.2
+    },
+    {
+      "horas_estudo": 5,
+      "nota": 6.5
+    },
+    {
+      "horas_estudo": 6,
+      "nota": 6.9
+    },
+    {
+      "horas_estudo": 7,
+      "nota": 7.2
+    },
+    {
+      "horas_estudo": 8,
+      "nota": 7.5
+    },
+    {
+      "horas_estudo": 9,
+      "nota": 7.9
+    },
+    {
+      "horas_estudo": 10,
+      "nota": 8.1
+    },
+    {
+      "horas_estudo": 11,
+      "nota": 8.5
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "Coeficiente β1",
+    "valor_estatistica": "0,33",
+    "p_valor": "< 0,001",
+    "itens_destaque": [
+      {
+        "rotulo": "Intercepto",
+        "valor": "4,95"
+      },
+      {
+        "rotulo": "Erro padrão de β1",
+        "valor": "0,03"
+      },
+      {
+        "rotulo": "IC 95% de β1",
+        "valor": "0,26 a 0,40"
+      },
+      {
+        "rotulo": "R²",
+        "valor": "0,95"
+      },
+      {
+        "rotulo": "n",
+        "valor": "10"
+      }
+    ]
+  },
+  "interpretacao": "Neste exemplo, cada hora adicional de estudo esteve associada a um aumento médio de 0,33 ponto na nota final. O R² sugere que grande parte da variabilidade das notas foi explicada pelo tempo de estudo.",
+  "planilha_exemplo": "regressao_linear_simples_simulacao.xlsx"
+}

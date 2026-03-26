@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Laboratório Virtual de Pesquisa em Simulação</title>
+
+  <!-- ====== ESTILOS ====== -->
+  <style>
+    /*  ———  layout base  ——— */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #1e88e5;
+      color: #fff;
+      height: 100px;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      height: 100px;
+      width: auto;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-text h1 {
+      margin: 0;
+      font-size: 1.35rem;
+      line-height: 1.15;
+    }
+
+    .brand-text p {
+      margin: 0;
+      font-size: .9rem;
+      font-style: italic;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: .95rem;
+      cursor: pointer;
+    }
+
+    .menu a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      flex: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    /*  ———  modal login  ——— */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, .5);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+      width: 100%;
+      max-width: 400px;
+      position: relative;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      font-size: 20px;
+      color: #333;
+      cursor: pointer;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      background: #1e88e5;
+      color: #fff;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    button:hover {
+      background: #1565c0;
+    }
+
+    footer {
+      background: #1e88e5;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+      height: 80px;
+    }
+
+    /* —— faixa central com banner — */
+    .banner-central {
+      width: 100vw;
+      height: calc(100vh - 100px - 80px); /* altura da tela menos header e footer */
+      background-image: url('/static/img/banner-central.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .overlay-conteudo {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 10px;
+      max-width: 80%;
+    }
+
+    .overlay-conteudo h1 {
+      font-size: 2.2rem;
+      margin: 0 0 10px;
+    }
+
+    .overlay-conteudo p {
+      font-size: 1.1rem;
+      margin: 0 0 20px;
+    }
+
+    .botao-banner {
+      background-color: #00aaff;
+      color: white;
+      padding: 10px 22px;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .botao-banner:hover {
+      background-color: #0077aa;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ====== CABEÇALHO ====== -->
+  <header>
+    <div class="brand">
+      <img src="/static/img/logo.png" alt="Logo" class="logo" />
+      <div class="brand-text">
+        <h1>Laboratório Virtual de Pesquisa em Simulação</h1>
+        <p>Métricas que impulsionam a pesquisa em simulação</p>
+      </div>
+    </div>
+    <nav class="menu">
+      <a href="#sobre-plataforma">Sobre a plataforma</a>
+      <a href="#referencias">Referências</a>
+      <a onclick="openModal()">Entrar</a>
+    </nav>
+  </header>
+
+  <!-- ====== CONTEÚDO PRINCIPAL ====== -->
+  <main>
+    <!-- ====== BANNER CENTRAL ====== -->
+    <section class="banner-central">
+    <div class="overlay-conteudo">
+      <h1>Teoria, prática e simplicidade na análise estatística.</h1>
+      <p>Uma plataforma criada para apoiar pesquisadores em simulação com conteúdos objetivos e análise de dados sem complicação.</p>
+     <!-- <a href="/simulacoes" class="botao-banner">Começar agora</a>-->
+    </div>
+    </section>
+  </main>
+
+  <!-- ====== MODAL LOGIN ====== -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+
+      <!-- id para o JS interceptar — sem method/action -->
+      <form id="loginForm">
+        <h2>Login</h2>
+        <input type="text" name="email" placeholder="E-mail" required />
+        <input type="password" name="senha" placeholder="Senha" required />
+        <button type="submit">Entrar</button>
+
+        <p style="text-align:center;margin-top:10px;"><a href="#">Esqueceu a senha?</a></p>
+        <p style="text-align:center;margin-top:5px;"><a href="/register">Realizar cadastro</a></p>
+      </form>
+    </div>
+  </div>
+
+  <!-- ====== RODAPÉ ====== -->
+  <footer>
+    <p>&copy; 2025 Laboratório Virtual de Pesquisa em Simulação – Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- ====== JS BÁSICO PARA O MODAL ====== -->
+  <script>
+    function openModal() {
+      document.getElementById('loginModal').style.display = 'flex';
+    }
+    function closeModal() {
+      document.getElementById('loginModal').style.display = 'none';
+    }
+    window.onclick = e => {
+      const modal = document.getElementById('loginModal');
+      if (e.target === modal) closeModal();
+    };
+  </script>
+
+  <!-- ====== AUTH.JS (intercepta o submit) ====== -->
+  <script type="module">
+    import { attachLogin } from "/static/js/auth.js";
+    attachLogin();
+  </script>
+</body>
+</html>

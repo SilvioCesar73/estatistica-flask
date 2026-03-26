@@ -1,0 +1,100 @@
+{
+  "nome": "Regressão logística binária",
+  "descricao": "Modelo indicado quando o desfecho é binário, como sucesso/insucesso, aprovado/reprovado ou evento/não evento.",
+  "tipo": "Modelo de predição para desfecho binário",
+  "requisitos": [
+    "Desfecho binário",
+    "Observações independentes",
+    "Tamanho amostral adequado",
+    "Leitura em odds ratio"
+  ],
+  "quando_usar": "Quando se deseja prever a probabilidade de um desfecho binário com um ou mais preditores.",
+  "exemplo": "Em um cenário de punção venosa, avaliou-se se maior exposição prévia à simulação aumenta a chance de aprovação prática.",
+  "instrumento": {
+    "tipo": "Registro de exposição e checklist final",
+    "itens": [
+      "Número de sessões de simulação",
+      "Aprovação prática (sim/não)"
+    ],
+    "escore_final": "Desfecho dicotômico: aprovado ou não aprovado."
+  },
+  "dados_exemplo": [
+    {
+      "sessoes_previas": 0,
+      "aprovado": 0
+    },
+    {
+      "sessoes_previas": 0,
+      "aprovado": 0
+    },
+    {
+      "sessoes_previas": 1,
+      "aprovado": 0
+    },
+    {
+      "sessoes_previas": 1,
+      "aprovado": 1
+    },
+    {
+      "sessoes_previas": 2,
+      "aprovado": 1
+    },
+    {
+      "sessoes_previas": 2,
+      "aprovado": 1
+    },
+    {
+      "sessoes_previas": 3,
+      "aprovado": 1
+    },
+    {
+      "sessoes_previas": 3,
+      "aprovado": 1
+    },
+    {
+      "sessoes_previas": 4,
+      "aprovado": 1
+    },
+    {
+      "sessoes_previas": 4,
+      "aprovado": 1
+    },
+    {
+      "sessoes_previas": 5,
+      "aprovado": 1
+    },
+    {
+      "sessoes_previas": 5,
+      "aprovado": 1
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "Odds ratio ajustada por sessão",
+    "valor_estatistica": "2,40",
+    "p_valor": "0,018",
+    "itens_destaque": [
+      {
+        "rotulo": "Coeficiente β",
+        "valor": "0,88"
+      },
+      {
+        "rotulo": "Erro padrão",
+        "valor": "0,37"
+      },
+      {
+        "rotulo": "IC 95% da OR",
+        "valor": "1,16 a 4,95"
+      },
+      {
+        "rotulo": "Pseudo-R² (Nagelkerke)",
+        "valor": "0,42"
+      },
+      {
+        "rotulo": "n",
+        "valor": "12"
+      }
+    ]
+  },
+  "interpretacao": "Cada sessão adicional esteve associada a aumento da chance de aprovação prática. Em regressão logística, a leitura costuma ser feita pela odds ratio, que aqui ficou acima de 1.",
+  "planilha_exemplo": "regressao_logistica_simulacao.xlsx"
+}

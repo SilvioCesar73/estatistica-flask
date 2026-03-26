@@ -1,0 +1,110 @@
+{
+  "mcnemar": {
+    "nome": "Teste de McNemar",
+    "descricao": "Teste não paramétrico usado para avaliar mudanças em respostas dicotômicas (sim/não) entre dois momentos em um mesmo grupo.",
+    "exemplo": "Um grupo de 30 enfermeiros foi testado antes e depois de uma simulação sobre assepsia de cateter venoso central. A pergunta era: 'Você conhece os passos corretos da técnica?'.",
+    "instrumento": {
+      "tipo": "Questionário dicotômico (Sim/Não)",
+      "itens": [
+        "Você conhece os passos corretos para a assepsia de cateter venoso central?"
+      ],
+      "escore_final": "Classificação individual em Sim ou Não antes e depois da intervenção. Contagem feita por frequência de mudança entre respostas."
+    },
+    "dados_exemplo": [
+      { "Resposta Pré": "Sim", "Resposta Pós": "Sim", "Frequência": 18 },
+      { "Resposta Pré": "Sim", "Resposta Pós": "Não", "Frequência": 2 },
+      { "Resposta Pré": "Não", "Resposta Pós": "Sim", "Frequência": 7 },
+      { "Resposta Pré": "Não", "Resposta Pós": "Não", "Frequência": 3 }
+    ],
+    "resultado_esperado": "p < 0,05. Houve aumento significativo no conhecimento dos profissionais após a simulação."
+  },
+  "wilcoxon": {
+    "nome": "Teste de Wilcoxon",
+    "descricao": "Teste não paramétrico usado para comparar duas distribuições relacionadas quando os dados são ordinais ou a normalidade não é garantida.",
+    "exemplo": "Aplicou-se uma escala de satisfação com 5 itens (pontuação de 1 a 10) antes e após o treinamento de simulação clínica com 15 fisioterapeutas.",
+    "instrumento": {
+      "tipo": "Escala tipo Likert (1 a 10)",
+      "itens": [
+        "Você se sentiu confiante ao realizar os procedimentos simulados?",
+        "A simulação contribuiu para seu aprendizado?",
+        "O ambiente simulado foi realista e adequado?",
+        "Você considera que a simulação ajudou na sua prática clínica?",
+        "Você participaria novamente de um treinamento similar?"
+      ],
+      "escore_final": "Média dos escores das 5 questões para cada participante no pré e pós-teste."
+    },
+    "dados_exemplo": [
+      { "Participante": 1, "Pré": 6, "Pós": 8 },
+      { "Participante": 2, "Pré": 7, "Pós": 9 },
+      { "Participante": 3, "Pré": 5, "Pós": 7 },
+      { "Participante": 4, "Pré": 6, "Pós": 8 },
+      { "Participante": 5, "Pré": 8, "Pós": 9 },
+      { "Participante": 6, "Pré": 6, "Pós": 8 },
+      { "Participante": 7, "Pré": 7, "Pós": 9 },
+      { "Participante": 8, "Pré": 5, "Pós": 7 },
+      { "Participante": 9, "Pré": 7, "Pós": 9 },
+      { "Participante": 10, "Pré": 6, "Pós": 8 },
+      { "Participante": 11, "Pré": 8, "Pós": 9 },
+      { "Participante": 12, "Pré": 5, "Pós": 7 },
+      { "Participante": 13, "Pré": 7, "Pós": 8 },
+      { "Participante": 14, "Pré": 6, "Pós": 9 },
+      { "Participante": 15, "Pré": 7, "Pós": 9 }
+    ],
+    "resultado_esperado": "p < 0,01. O nível de satisfação dos participantes aumentou significativamente após o treinamento."
+  },
+  "qui_quadrado": {
+    "nome": "Teste do Qui-Quadrado (independência)",
+    "descricao": "Verifica se há associação entre duas variáveis categóricas em grupos diferentes.",
+    "exemplo": "Comparou-se a proporção de acertos em um checklist de simulação entre enfermeiros e médicos.",
+    "instrumento": {
+      "tipo": "Checklist de avaliação de desempenho (Sim/Não para cada item)",
+      "itens": [
+        "Lavagem das mãos realizada corretamente.",
+        "Verificação da identidade do paciente.",
+        "Montagem do material com técnica asséptica.",
+        "Monitorização dos sinais vitais durante o procedimento.",
+        "Comunicação clara com a equipe assistencial."
+      ],
+      "escore_final": "Total de itens corretos (Sim) por participante. Classificados em 'Acertou' se ≥ 4 de 5 itens corretos, senão 'Errou'."
+    },
+    "dados_exemplo": [
+      { "Profissão": "Enfermeiros", "Acertou": 25, "Errou": 5 },
+      { "Profissão": "Médicos", "Acertou": 18, "Errou": 12 }
+    ],
+    "resultado_esperado": "p < 0,05. Os enfermeiros tiveram desempenho significativamente superior no checklist da simulação."
+  },
+  "t_pareado": {
+    "nome": "Teste t pareado",
+    "descricao": "Usado quando os dados são contínuos e pareados, comparando médias antes e depois de uma intervenção.",
+    "exemplo": "Aplicou-se um teste teórico de 20 pontos antes e após um módulo de simulação sobre atendimento a parada cardiorrespiratória.",
+    "instrumento": {
+      "tipo": "Teste teórico com 20 questões objetivas (cada uma vale 1 ponto)",
+      "itens": [
+        "Qual a sequência correta da RCP em adultos?",
+        "Quais são os ritmos chocáveis no protocolo ACLS?",
+        "Indicações para uso de adrenalina durante PCR.",
+        "Frequência ideal de compressões torácicas por minuto.",
+        "Critérios de retorno à circulação espontânea (RCE).",
+        "Conduta frente a uma obstrução de vias aéreas.",
+        "Número de ventilações por minuto com bolsa-válvula-máscara.",
+        "Momento adequado para checagem de pulso.",
+        "Tipos de vias aéreas avançadas disponíveis.",
+        "Monitoramento capnográfico: aplicação e interpretação."
+      ],
+      "escore_final": "Soma dos acertos nas 10 questões (0 a 10)."
+    },
+    "dados_exemplo": [
+      { "Participante": 1, "Pré": 5, "Pós": 9 },
+      { "Participante": 2, "Pré": 6, "Pós": 10 },
+      { "Participante": 3, "Pré": 4, "Pós": 8 },
+      { "Participante": 4, "Pré": 7, "Pós": 10 },
+      { "Participante": 5, "Pré": 3, "Pós": 7 },
+      { "Participante": 6, "Pré": 5, "Pós": 9 },
+      { "Participante": 7, "Pré": 6, "Pós": 10 },
+      { "Participante": 8, "Pré": 4, "Pós": 8 },
+      { "Participante": 9, "Pré": 6, "Pós": 10 },
+      { "Participante": 10, "Pré": 7, "Pós": 10 }
+    ],
+    "resultado_esperado": "p < 0,001. A simulação melhorou significativamente o desempenho teórico dos participantes."
+  }
+}

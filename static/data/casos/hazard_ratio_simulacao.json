@@ -1,0 +1,84 @@
+{
+  "nome": "Hazard Ratio",
+  "descricao": "O hazard ratio compara o risco instantâneo de ocorrência do evento ao longo do seguimento.",
+  "tipo": "Medida de associação em análise de sobrevivência",
+  "requisitos": [
+    "Desfecho do tipo tempo até evento",
+    "Seguimento temporal",
+    "Modelo de sobrevivência ou Cox"
+  ],
+  "quando_usar": "Quando interessa comparar a velocidade com que um evento ocorre entre grupos ao longo do tempo.",
+  "exemplo": "Dois grupos de residentes foram acompanhados até o primeiro erro crítico em um conjunto de cenários seriados. Um grupo recebeu treino adicional de comunicação em crise e o outro não.",
+  "instrumento": {
+    "tipo": "Banco de tempo até evento",
+    "itens": [
+      "Grupo",
+      "Tempo até o primeiro erro crítico",
+      "Ocorrência do evento"
+    ],
+    "escore_final": "Comparação do risco instantâneo ao longo do seguimento."
+  },
+  "dados_exemplo": [
+    {
+      "grupo": "Treino adicional",
+      "tempo_seguimento_meses": 1,
+      "erro_critico": 0
+    },
+    {
+      "grupo": "Treino adicional",
+      "tempo_seguimento_meses": 2,
+      "erro_critico": 0
+    },
+    {
+      "grupo": "Treino adicional",
+      "tempo_seguimento_meses": 3,
+      "erro_critico": 1
+    },
+    {
+      "grupo": "Treino adicional",
+      "tempo_seguimento_meses": 4,
+      "erro_critico": 0
+    },
+    {
+      "grupo": "Controle",
+      "tempo_seguimento_meses": 1,
+      "erro_critico": 1
+    },
+    {
+      "grupo": "Controle",
+      "tempo_seguimento_meses": 2,
+      "erro_critico": 1
+    },
+    {
+      "grupo": "Controle",
+      "tempo_seguimento_meses": 3,
+      "erro_critico": 0
+    },
+    {
+      "grupo": "Controle",
+      "tempo_seguimento_meses": 4,
+      "erro_critico": 1
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "Hazard Ratio",
+    "valor_estatistica": "0,46",
+    "p_valor": "0,041",
+    "itens_destaque": [
+      {
+        "rotulo": "IC 95% do HR",
+        "valor": "0,22 a 0,97"
+      },
+      {
+        "rotulo": "Leitura prática",
+        "valor": "risco instantâneo menor no grupo treinado"
+      },
+      {
+        "rotulo": "n",
+        "valor": "8 registros ilustrativos"
+      }
+    ]
+  },
+  "interpretacao": "O grupo com treino adicional apresentou menor risco instantâneo de erro crítico ao longo do seguimento. Em estudos com tempo até evento, o HR é mais informativo do que comparar apenas proporções finais.",
+  "planilha_exemplo": "hazard_ratio_simulacao.xlsx"
+}

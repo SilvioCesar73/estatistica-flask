@@ -1,0 +1,103 @@
+{
+  "nome": "Regressão linear múltipla",
+  "descricao": "A regressão linear múltipla estima o efeito simultâneo de mais de um preditor sobre um desfecho contínuo.",
+  "tipo": "Modelo paramétrico de predição",
+  "requisitos": [
+    "Desfecho contínuo",
+    "Relação aproximadamente linear entre preditores e desfecho",
+    "Ausência de multicolinearidade importante",
+    "Resíduos avaliados"
+  ],
+  "quando_usar": "Quando o desfecho é contínuo e se deseja considerar mais de uma variável explicativa no mesmo modelo.",
+  "exemplo": "Foi avaliado se a nota final em simulação clínica pode ser explicada simultaneamente por horas de estudo e autoeficácia percebida.",
+  "instrumento": {
+    "tipo": "Checklist de desempenho + escala de autoeficácia",
+    "itens": [
+      "Horas de estudo prévio",
+      "Escala de autoeficácia (1 a 10)",
+      "Nota final no cenário"
+    ],
+    "escore_final": "Desfecho contínuo: nota final de 0 a 10."
+  },
+  "dados_exemplo": [
+    {
+      "horas_estudo": 3,
+      "autoeficacia": 4,
+      "nota": 5.8
+    },
+    {
+      "horas_estudo": 4,
+      "autoeficacia": 5,
+      "nota": 6.2
+    },
+    {
+      "horas_estudo": 5,
+      "autoeficacia": 6,
+      "nota": 6.6
+    },
+    {
+      "horas_estudo": 6,
+      "autoeficacia": 6,
+      "nota": 6.9
+    },
+    {
+      "horas_estudo": 6,
+      "autoeficacia": 7,
+      "nota": 7.1
+    },
+    {
+      "horas_estudo": 7,
+      "autoeficacia": 7,
+      "nota": 7.4
+    },
+    {
+      "horas_estudo": 8,
+      "autoeficacia": 8,
+      "nota": 7.8
+    },
+    {
+      "horas_estudo": 9,
+      "autoeficacia": 8,
+      "nota": 8.2
+    },
+    {
+      "horas_estudo": 9,
+      "autoeficacia": 9,
+      "nota": 8.5
+    },
+    {
+      "horas_estudo": 10,
+      "autoeficacia": 9,
+      "nota": 8.8
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "Coeficientes β",
+    "valor_estatistica": "modelo global p < 0,001",
+    "p_valor": "< 0,001",
+    "itens_destaque": [
+      {
+        "rotulo": "β horas de estudo",
+        "valor": "0,21"
+      },
+      {
+        "rotulo": "β autoeficácia",
+        "valor": "0,29"
+      },
+      {
+        "rotulo": "Erro padrão médio",
+        "valor": "0,05"
+      },
+      {
+        "rotulo": "R² ajustado",
+        "valor": "0,96"
+      },
+      {
+        "rotulo": "n",
+        "valor": "10"
+      }
+    ]
+  },
+  "interpretacao": "Os dois preditores contribuíram positivamente para a nota final. Neste cenário, maior estudo e maior autoeficácia estiveram associados a melhor desempenho, mesmo quando considerados ao mesmo tempo.",
+  "planilha_exemplo": "regressao_linear_multipla_simulacao.xlsx"
+}

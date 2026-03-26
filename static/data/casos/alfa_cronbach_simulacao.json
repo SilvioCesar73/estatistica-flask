@@ -1,0 +1,114 @@
+{
+  "nome": "Alfa de Cronbach",
+  "descricao": "O alfa de Cronbach é uma medida de consistência interna. Ele ajuda a avaliar se os itens de uma escala parecem medir o mesmo construto.",
+  "tipo": "Medida de confiabilidade interna",
+  "requisitos": [
+    "Escala com múltiplos itens",
+    "Itens voltados ao mesmo construto",
+    "Leitura conjunta com a teoria do instrumento"
+  ],
+  "quando_usar": "Quando se deseja verificar a coerência interna de questionários, escalas Likert ou checklists somativos.",
+  "exemplo": "Uma escala de autoeficácia para simulação, com 5 itens em Likert de 1 a 5, foi aplicada a 8 estudantes. O objetivo é verificar se os itens funcionam de forma coesa.",
+  "instrumento": {
+    "tipo": "Escala Likert de autoeficácia em simulação",
+    "itens": [
+      "Sinto-me capaz de reconhecer prioridades clínicas.",
+      "Consigo decidir intervenções com segurança.",
+      "Tenho confiança para comunicar achados à equipe.",
+      "Consigo organizar minhas ações sob pressão.",
+      "Sinto-me preparado para atuar em cenários semelhantes."
+    ],
+    "escore_final": "Soma ou média dos 5 itens, desde que a consistência interna seja aceitável."
+  },
+  "dados_exemplo": [
+    {
+      "id": 1,
+      "item1": 4,
+      "item2": 4,
+      "item3": 5,
+      "item4": 4,
+      "item5": 5
+    },
+    {
+      "id": 2,
+      "item1": 3,
+      "item2": 4,
+      "item3": 4,
+      "item4": 3,
+      "item5": 4
+    },
+    {
+      "id": 3,
+      "item1": 5,
+      "item2": 5,
+      "item3": 5,
+      "item4": 4,
+      "item5": 5
+    },
+    {
+      "id": 4,
+      "item1": 4,
+      "item2": 3,
+      "item3": 4,
+      "item4": 4,
+      "item5": 4
+    },
+    {
+      "id": 5,
+      "item1": 2,
+      "item2": 3,
+      "item3": 3,
+      "item4": 2,
+      "item5": 3
+    },
+    {
+      "id": 6,
+      "item1": 4,
+      "item2": 4,
+      "item3": 4,
+      "item4": 4,
+      "item5": 4
+    },
+    {
+      "id": 7,
+      "item1": 5,
+      "item2": 4,
+      "item3": 5,
+      "item4": 5,
+      "item5": 5
+    },
+    {
+      "id": 8,
+      "item1": 3,
+      "item2": 3,
+      "item3": 4,
+      "item4": 3,
+      "item5": 3
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "Alfa de Cronbach",
+    "valor_estatistica": "0,86",
+    "p_valor": "não se aplica",
+    "itens_destaque": [
+      {
+        "rotulo": "Número de itens",
+        "valor": "5"
+      },
+      {
+        "rotulo": "n",
+        "valor": "8"
+      },
+      {
+        "rotulo": "Correlação item-total média",
+        "valor": "0,61"
+      },
+      {
+        "rotulo": "Leitura prática",
+        "valor": "boa consistência interna"
+      }
+    ]
+  },
+  "interpretacao": "Neste exemplo, os itens apresentaram boa coerência interna. Isso sustenta o uso da soma ou média dos itens como escore global, desde que o conteúdo do instrumento também seja teoricamente consistente.",
+  "planilha_exemplo": "alfa_cronbach_simulacao.xlsx"
+}

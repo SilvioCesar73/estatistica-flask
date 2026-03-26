@@ -1,0 +1,57 @@
+{
+  "nome": "Razão de chances (Odds Ratio - OR)",
+  "descricao": "A OR é uma medida de associação muito usada em estudos caso-controle e em tabelas 2×2.",
+  "tipo": "Medida de associação",
+  "requisitos": [
+    "Desfecho binário",
+    "Dois grupos ou duas exposições",
+    "Leitura da chance do evento"
+  ],
+  "quando_usar": "Quando se deseja comparar as chances de um desfecho entre expostos e não expostos.",
+  "exemplo": "Comparou-se a chance de aprovação prática entre estudantes que participaram de simulação extracurricular e estudantes sem essa experiência adicional.",
+  "instrumento": {
+    "tipo": "Tabela 2×2",
+    "itens": [
+      "Exposição: participou de simulação extracurricular",
+      "Desfecho: aprovação prática"
+    ],
+    "escore_final": "Medida de associação em termos de chance."
+  },
+  "dados_exemplo": [
+    {
+      "grupo": "Expostos",
+      "aprovados": 30,
+      "reprovados": 10
+    },
+    {
+      "grupo": "Não expostos",
+      "aprovados": 18,
+      "reprovados": 22
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "Odds ratio",
+    "valor_estatistica": "3,67",
+    "p_valor": "0,006",
+    "itens_destaque": [
+      {
+        "rotulo": "IC 95% da OR",
+        "valor": "1,45 a 9,28"
+      },
+      {
+        "rotulo": "Chance de aprovação nos expostos",
+        "valor": "3,00"
+      },
+      {
+        "rotulo": "Chance de aprovação nos não expostos",
+        "valor": "0,82"
+      },
+      {
+        "rotulo": "n",
+        "valor": "80"
+      }
+    ]
+  },
+  "interpretacao": "Os estudantes expostos à simulação extracurricular apresentaram chance de aprovação prática cerca de 3,7 vezes maior do que os não expostos neste exemplo.",
+  "planilha_exemplo": "odds_ratio_simulacao.xlsx"
+}

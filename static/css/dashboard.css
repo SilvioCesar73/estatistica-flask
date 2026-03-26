@@ -1,0 +1,225 @@
+/* Cabeçalho e logo */
+header {
+  background: #1e88e5;
+  color: #fff;
+  height: 100px;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.brand-text h1 {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.15;
+}
+
+.brand-text p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.menu a:hover {
+  text-decoration: underline;
+}
+
+/* Layout geral */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer {
+  background: #1e88e5;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.dashboard-container {
+  flex: 1;
+  display: flex;
+}
+
+.sidebar {
+  width: 240px;
+  background: #f1f1f1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-right: 1px solid #ccc;
+}
+
+.sidebar button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background: #fff;
+  border: 1px solid #1e88e5;
+  border-radius: 10px;
+  color: #1e88e5;
+  cursor: pointer;
+  transition: .3s;
+  text-align: left;
+}
+
+.sidebar button:hover {
+  background: #1e88e5;
+  color: #fff;
+}
+
+.main-panel {
+  flex: 1;
+  padding: 2rem;
+  background: #fafafa;
+  overflow-y: auto;
+  height: calc(100vh - 100px);
+}
+
+/* Popup genérico */
+.popup {
+  display: none;
+  position: fixed;
+  top: 10vh;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+  width: 90%;
+  max-width: 800px;
+  z-index: 10;
+  max-height: 75vh;
+  overflow-y: auto;
+  font-size: 11px;
+}
+
+.popup h3 {
+  margin: 0 0 1rem;
+  color: #1e88e5;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  z-index: 5;
+}
+
+.close-btn {
+  background: red;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  float: right;
+  cursor: pointer;
+}
+
+/* Tabelas e botões do quiz */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+th {
+  background: #f1f1f1;
+}
+
+#quiz-form button {
+  background: #1e88e5;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 20px auto;
+  display: block;
+}
+
+#sugestao-teste {
+  border-top: 2px solid #ccc;
+  background: #f9f9f9;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 8px;
+}
+
+/* Quadrantes */
+.quadrantes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.quadrante {
+  border: 2px dashed #1e88e5;
+  border-radius: 12px;
+  background: #fff;
+  padding: 1.5rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.quadrante h3 {
+  margin: 0 0 .75rem;
+}
+
+.quadrante button {
+  margin: 6px 0;
+  padding: 8px 12px;
+  font-size: .9rem;
+  background: #f1f1f1;
+  border: 1px solid #1e88e5;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  transition: .3s;
+}
+
+.quadrante button:hover {
+  background: #1e88e5;
+  color: #fff;
+}

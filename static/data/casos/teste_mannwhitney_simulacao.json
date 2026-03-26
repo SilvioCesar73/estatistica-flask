@@ -1,0 +1,214 @@
+{
+  "nome": "Mann-Whitney U",
+  "descricao": "O teste Mann‑Whitney (Wilcoxon rank‑sum) compara as distribuições de dois grupos independentes quando os dados não satisfazem os pressupostos do t‑teste.",
+  "tipo": "Não paramétrico",
+  "requisitos": [
+    "Escalas ordinais ou intervalares/razão não normais",
+    "Observações independentes",
+    "Grupos mutuamente exclusivos"
+  ],
+  "quando_usar": "Para comparar dois grupos independentes quando há violação da normalidade ou dados são ordinais — por exemplo, escores de confiança clínica de estudantes.",
+  "exemplo": "Estudantes de enfermagem foram divididos em dois grupos: controle (aula tradicional) e intervenção (simulação em realidade virtual). Após a atividade, classificaram sua confiança clínica numa escala de 1 a 5. O teste Mann‑Whitney avalia se as distribuições diferem.",
+  "instrumento": {
+    "tipo": "Escala ordinal de confiança clínica (1 = muito baixa … 5 = muito alta)",
+    "itens": [
+      "Raciocínio clínico",
+      "Comunicação",
+      "Segurança do paciente",
+      "Habilidades técnicas",
+      "Tomada de decisão"
+    ],
+    "escore_final": "Média dos itens, arredondada (1–5)"
+  },
+  "dados_exemplo": [
+    {
+      "grupo": "Controle",
+      "nota": 4
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 4
+    },
+    {
+      "grupo": "Controle",
+      "nota": 4
+    },
+    {
+      "grupo": "Controle",
+      "nota": 4
+    },
+    {
+      "grupo": "Controle",
+      "nota": 2
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 4
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 2
+    },
+    {
+      "grupo": "Controle",
+      "nota": 2
+    },
+    {
+      "grupo": "Controle",
+      "nota": 2
+    },
+    {
+      "grupo": "Controle",
+      "nota": 4
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 2
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 2
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 4
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 4
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 4
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 5
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 3
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 4
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 4
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 4
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 5
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 5
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 5
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 5
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 4
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 4
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 5
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 5
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 4
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 5
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 5
+    },
+    {
+      "grupo": "Intervencao_SimulacaoVR",
+      "nota": 4
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "U de Mann-Whitney",
+    "valor_estatistica": 40.0,
+    "p_valor": "< 0,001",
+    "itens_destaque": [
+      {
+        "rotulo": "Escore mediano do controle",
+        "valor": "3"
+      },
+      {
+        "rotulo": "Escore mediano da intervenção",
+        "valor": "4"
+      },
+      {
+        "rotulo": "Estatística Z aproximada",
+        "valor": "-4,33"
+      },
+      {
+        "rotulo": "Tamanho de efeito (r)",
+        "valor": "0,68"
+      },
+      {
+        "rotulo": "Leitura da magnitude",
+        "valor": "forte"
+      }
+    ]
+  },
+  "interpretacao": "Os escores do grupo com intervenção ficaram deslocados para valores mais altos do que os do controle. Além do p-valor, a estatística U e o tamanho de efeito r mostram que a diferença foi forte neste exemplo.",
+  "planilha_exemplo": "teste_mannwhitney_simulacao.xlsx"
+}

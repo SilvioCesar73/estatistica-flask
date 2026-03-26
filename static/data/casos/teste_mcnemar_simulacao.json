@@ -1,0 +1,194 @@
+{
+  "nome": "McNemar",
+  "descricao": "O teste de McNemar verifica se houve mudança na proporção de respostas dicotômicas (ex. correto/incorreto) entre dois momentos pareados no mesmo grupo.",
+  "tipo": "Teste de associação para dados pareados",
+  "requisitos": [
+    "Variável binária (sim/não)",
+    "Observações emparelhadas",
+    "Tabela 2×2 de discordanças"
+  ],
+  "quando_usar": "Para avaliar mudança em proporções de acerto após uma intervenção educacional com os mesmos participantes.",
+  "exemplo": "Vinte e oito estudantes de enfermagem responderam a um checklist binário antes e depois de uma simulação de parada cardiorrespiratória.",
+  "instrumento": {
+    "tipo": "Checklist binário de 10 itens sobre suporte básico de vida",
+    "itens": [
+      "Reconhecimento de PCR",
+      "Ativação do SAMU",
+      "Compressões torácicas",
+      "Ventilação de resgate",
+      "Uso do DEA"
+    ],
+    "escore_final": "Aprovado se ≥ 8/10 itens corretos"
+  },
+  "dados_exemplo": [
+    {
+      "id_estudante": 1,
+      "correto_pre": false,
+      "correto_pos": false
+    },
+    {
+      "id_estudante": 2,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 3,
+      "correto_pre": true,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 4,
+      "correto_pre": true,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 5,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 6,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 7,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 8,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 9,
+      "correto_pre": true,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 10,
+      "correto_pre": true,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 11,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 12,
+      "correto_pre": true,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 13,
+      "correto_pre": true,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 14,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 15,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 16,
+      "correto_pre": true,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 17,
+      "correto_pre": true,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 18,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 19,
+      "correto_pre": true,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 20,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 21,
+      "correto_pre": false,
+      "correto_pos": false
+    },
+    {
+      "id_estudante": 22,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 23,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 24,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 25,
+      "correto_pre": false,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 26,
+      "correto_pre": true,
+      "correto_pos": true
+    },
+    {
+      "id_estudante": 27,
+      "correto_pre": false,
+      "correto_pos": false
+    },
+    {
+      "id_estudante": 28,
+      "correto_pre": false,
+      "correto_pos": true
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "χ² de McNemar",
+    "valor_estatistica": 13.07,
+    "p_valor": "< 0,001",
+    "itens_destaque": [
+      {
+        "rotulo": "Discordantes: erro → acerto",
+        "valor": "15"
+      },
+      {
+        "rotulo": "Discordantes: acerto → erro",
+        "valor": "0"
+      },
+      {
+        "rotulo": "Proporção correta no pré",
+        "valor": "35,71%"
+      },
+      {
+        "rotulo": "Proporção correta no pós",
+        "valor": "89,29%"
+      },
+      {
+        "rotulo": "Variação absoluta",
+        "valor": "53,57 p.p."
+      }
+    ]
+  },
+  "interpretacao": "O ganho ocorreu principalmente na direção erro → acerto, com forte aumento da proporção de respostas corretas após a intervenção. Em dados pareados binários, essa leitura é mais informativa do que olhar apenas para o p-valor.",
+  "planilha_exemplo": "teste_mcnemar_simulacao.xlsx"
+}

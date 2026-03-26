@@ -1,0 +1,141 @@
+{
+  "nome": "Ômega de McDonald",
+  "descricao": "O ômega de McDonald é uma medida de consistência interna. Ele ajuda a avaliar a confiabilidade do escore total quando os itens não precisam contribuir de maneira idêntica para o construto.",
+  "tipo": "Medida de consistência interna",
+  "requisitos": [
+    "Escala com múltiplos itens",
+    "Itens teoricamente ligados ao mesmo construto",
+    "Preferencialmente acompanhado de análise dimensional do instrumento"
+  ],
+  "quando_usar": "Quando se deseja avaliar a confiabilidade interna de questionários, escalas Likert ou instrumentos educacionais, especialmente quando se quer uma leitura complementar ou alternativa ao alfa de Cronbach.",
+  "exemplo": "Uma escala de autoconfiança em simulação, com 6 itens em Likert de 1 a 5, foi aplicada a 10 estudantes. O objetivo é verificar se o escore global tem boa confiabilidade interna.",
+  "instrumento": {
+    "tipo": "Escala Likert de autoconfiança em simulação",
+    "itens": [
+      "Reconheço prioridades clínicas com segurança.",
+      "Consigo explicar meu raciocínio para a equipe.",
+      "Sinto-me confiante para intervir em situações críticas.",
+      "Consigo manter organização sob pressão.",
+      "Tenho clareza para definir condutas iniciais.",
+      "Sinto-me preparado para atuar em cenário semelhante."
+    ],
+    "escore_final": "Média dos 6 itens, desde que a consistência interna seja considerada adequada."
+  },
+  "dados_exemplo": [
+    {
+      "id": 1,
+      "item1": 4,
+      "item2": 4,
+      "item3": 5,
+      "item4": 4,
+      "item5": 4,
+      "item6": 5
+    },
+    {
+      "id": 2,
+      "item1": 3,
+      "item2": 4,
+      "item3": 4,
+      "item4": 3,
+      "item5": 4,
+      "item6": 4
+    },
+    {
+      "id": 3,
+      "item1": 5,
+      "item2": 5,
+      "item3": 5,
+      "item4": 4,
+      "item5": 5,
+      "item6": 5
+    },
+    {
+      "id": 4,
+      "item1": 4,
+      "item2": 3,
+      "item3": 4,
+      "item4": 4,
+      "item5": 4,
+      "item6": 4
+    },
+    {
+      "id": 5,
+      "item1": 2,
+      "item2": 3,
+      "item3": 3,
+      "item4": 2,
+      "item5": 3,
+      "item6": 3
+    },
+    {
+      "id": 6,
+      "item1": 4,
+      "item2": 4,
+      "item3": 4,
+      "item4": 4,
+      "item5": 4,
+      "item6": 4
+    },
+    {
+      "id": 7,
+      "item1": 5,
+      "item2": 4,
+      "item3": 5,
+      "item4": 5,
+      "item5": 5,
+      "item6": 5
+    },
+    {
+      "id": 8,
+      "item1": 3,
+      "item2": 3,
+      "item3": 4,
+      "item4": 3,
+      "item5": 3,
+      "item6": 4
+    },
+    {
+      "id": 9,
+      "item1": 4,
+      "item2": 5,
+      "item3": 4,
+      "item4": 4,
+      "item5": 5,
+      "item6": 4
+    },
+    {
+      "id": 10,
+      "item1": 3,
+      "item2": 4,
+      "item3": 4,
+      "item4": 3,
+      "item5": 4,
+      "item6": 3
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "Ômega de McDonald",
+    "valor_estatistica": "0,89",
+    "p_valor": "não se aplica",
+    "itens_destaque": [
+      {
+        "rotulo": "Número de itens",
+        "valor": "6"
+      },
+      {
+        "rotulo": "n",
+        "valor": "10"
+      },
+      {
+        "rotulo": "Leitura prática",
+        "valor": "boa confiabilidade do escore total"
+      },
+      {
+        "rotulo": "IC 95%",
+        "valor": "0,81 a 0,94"
+      }
+    ]
+  },
+  "interpretacao": "Neste exemplo, o ômega sugere boa confiabilidade interna do escore global. Isso indica que os itens funcionam de modo coeso para representar o construto, sem pressupor que todos tenham exatamente o mesmo peso.",
+  "planilha_exemplo": "omega_mcdonald_simulacao.xlsx"
+}

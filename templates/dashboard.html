@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard - Plataforma Estatística</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/layout.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/popup.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz_modal.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/componentes.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/introducao-teorica.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/internal-theme.css') }}">
+
+  <script src="/static/js/sugestoes-testes.js"></script>
+  <script src="{{ url_for('static', filename='js/normalidade_grafico.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/quiz_modal.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/teste_normalidade.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/quadrantes_testes.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/simulacao-saude.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/boas_vindas.js') }}"></script>
+  <script type="module" src="{{ url_for('static', filename='js/introducao-teorica.js') }}"></script>
+</head>
+<body class="internal-page" data-user-id="{{ user_id }}" data-username="{{ username }}">
+  <header class="site-header">
+    <div class="brand-wrap">
+      <img src="/static/img/logo.png" alt="Logo" class="logo">
+      <div class="brand-text">
+        <h1>Laboratório Virtual de Pesquisa em Simulação</h1>
+        <p>Métricas que impulsionam a pesquisa em simulação</p>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <div class="user-pill">Logado como: <strong>{{ username }}</strong></div>
+      <nav class="header-nav">
+        <a id="logoutLink" href="#">Sair</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="app-shell">
+    <aside class="sidebar">
+      <button onclick="carregarIntroducaoTeorica()">📖 Introdução Teórica</button>
+      <button onclick="carregarSimulacaoSaude()" title="Conheça estratégias centrais de simulação em saúde e como elas se conectam à pesquisa e ao ensino.">🧪 Simulação em Saúde</button>
+      <button onclick="carregarTesteNormalidade()" title="Verifique se seus dados seguem uma distribuição normal antes de escolher o teste.">📈 Testes de Normalidade</button>
+      <button onclick="carregarTestes()" title="Veja os testes disponíveis, com exemplos e planilhas para download.">📊 Exemplos Práticos e Planilhas</button>
+      <button onclick="carregarQuizModal()" title="Responda perguntas e receba uma direção didática para a escolha do teste estatístico.">🛠️ Ferramenta de Seleção de Teste</button>
+      <button onclick="startNewAnalysis()" title="Inicie um novo estudo e registre suas análises.">📋 Nova Análise</button>
+      <button title="Acesse os estudos que você já iniciou ou salvou anteriormente.">📁 Minhas Análises</button>
+      <button title="Acesse tutoriais, vídeos e ajuda para usar a plataforma.">❓ Ajuda</button>
+    </aside>
+
+    <main class="main-panel">
+      <div id="testes-container" class="testes-lista"></div>
+    </main>
+  </div>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="popup" id="popup">
+    <button class="close-btn" onclick="fecharPopup()">X</button>
+    <div id="popup-content"></div>
+  </div>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Laboratório Virtual de Pesquisa em Simulação – Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    window.addEventListener('load', () => {
+      if (typeof sugestoesTestes === 'undefined') {
+        console.warn('Arquivo sugestoes-testes.js não carregado.');
+      }
+    });
+  </script>
+  <script type="module">
+    import { attachLogout } from "/static/js/auth.js";
+    attachLogout();
+  </script>
+  <script src="{{ url_for('static', filename='js/popup_util.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/new_analysis.js') }}"></script>
+</body>
+</html>

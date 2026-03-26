@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro – Plataforma Estatística</title>
+
+  <!-- ====== ESTILO (mesmo visual do index.html) ====== -->
+  <style>
+    /* ———  blocos vindos do index.html  ——— */
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: #1e88e5;
+      color: #fff;
+      height: 100px;
+      padding: 0 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo { height: 100px; width: auto; }
+
+    .logo-text h1 {
+      margin: 0;
+      font-size: 1.35rem;
+      line-height: 1.15;
+    }
+    .logo-text p {
+      margin: 0;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
+    nav { display: flex; gap: 20px; }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    footer {
+      background: #1e88e5;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    /* ——  estilos específicos do formulário de cadastro  —— */
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+
+    form {
+      width: 100%;
+      max-width: 600px;
+      background: #f9f9f9;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 1rem;
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 25px;
+      background: #1e88e5;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover { background: #1565c0; }
+  </style>
+</head>
+
+<body>
+  <!-- ====== CABEÇALHO ====== -->
+  <header>
+    <div class="brand" style="display:flex;align-items:center;gap:12px;">
+      <img src="/static/img/logo.png" alt="Logo" class="logo" />
+      <div class="logo-text">
+        <h1>Laboratório Virtual de Pesquisa em Simulação</h1>
+        <p>Métricas que impulsionam a pesquisa em simulação</p>
+      </div>
+    </div>
+    <nav><a href="/">Início</a></nav>
+  </header>
+
+  <!-- ====== FORMULÁRIO DE CADASTRO ====== -->
+  <div class="container">
+    <form id="registerForm">
+      <h2 style="text-align:center;margin-top:0">Cadastro</h2>
+
+      <label for="nome">Nome completo</label>
+      <input type="text" name="nome" required />
+
+      <label for="email">E-mail</label>
+      <input type="text" name="email" required />
+
+      <label for="senha">Senha</label>
+      <input type="password" name="senha" required />
+
+      <label for="confirmar_senha">Confirmar senha</label>
+      <input type="password" name="confirmar_senha" required />
+
+      <label for="profissao">Profissão</label>
+      <select name="profissao" required>
+        <option>Enfermeiro</option><option>Médico</option>
+        <option>Fisioterapeuta</option><option>Nutricionista</option>
+        <option>Outro</option>
+      </select>
+
+      <label for="nacionalidade">Nacionalidade</label>
+      <select name="nacionalidade" id="nacionalidade" onchange="toggleCampos()" required>
+        <option value="Brasileiro">Brasileiro</option>
+        <option value="Estrangeiro">Estrangeiro</option>
+      </select>
+
+      <div id="campo_estado" style="display:none">
+        <label for="estado">Estado</label>
+        <select name="estado">
+          <option value="">Selecione o estado</option>
+          <option value="RJ">Rio de Janeiro</option>
+          <option value="SP">São Paulo</option>
+          <!-- demais estados… -->
+        </select>
+      </div>
+
+      <div id="campo_pais" style="display:none">
+        <label for="pais">País</label>
+        <select name="pais">
+          <option value="">Selecione o país</option>
+          <option value="Brasil">Brasil</option>
+          <option value="Portugal">Portugal</option>
+          <!-- demais países… -->
+        </select>
+      </div>
+
+      <label for="tempo_experiencia">Tempo de experiência profissional (anos)</label>
+      <input type="text" name="tempo_experiencia" />
+
+      <label for="formacao">Formação acadêmica</label>
+      <select name="formacao" required>
+        <option value="">Selecione a formação</option>
+        <option value="Graduação">Graduação</option>
+        <option value="Especialização">Especialização</option>
+        <option value="Mestrado">Mestrado</option>
+        <option value="Doutorado">Doutorado</option>
+      </select>
+
+      <label for="simulacao">Já participou de simulação clínica?</label>
+      <select name="simulacao" required>
+        <option value="Sim">Sim</option>
+        <option value="Não">Não</option>
+      </select>
+
+      <button type="submit">Finalizar cadastro</button>
+    </form>
+  </div>
+
+  <!-- ====== RODAPÉ ====== -->
+  <footer>
+    <p>&copy; 2025 Laboratório Virtual de Pesquisa em Simulação – Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- ====== JS: exibir/esconder estado/pais ====== -->
+  <script>
+    function toggleCampos() {
+      const nac = document.getElementById('nacionalidade').value;
+      document.getElementById('campo_estado').style.display = nac === 'Brasileiro'  ? 'block' : 'none';
+      document.getElementById('campo_pais'  ).style.display = nac === 'Estrangeiro' ? 'block' : 'none';
+    }
+    window.onload = toggleCampos;
+  </script>
+
+  <!-- ====== AUTH.JS (fetch) ====== -->
+  <script type="module">
+    import { attachRegister } from "/static/js/auth.js";
+    attachRegister();
+  </script>
+</body>
+</html>

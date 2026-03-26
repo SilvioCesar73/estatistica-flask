@@ -1,0 +1,170 @@
+{
+  "nome": "Correlação de Spearman",
+  "descricao": "O coeficiente de Spearman (ρ) mede a força e a direção de uma relação monótona entre duas variáveis, usando postos (ranks). Não requer normalidade.",
+  "tipo": "Medida de correlação não paramétrica",
+  "requisitos": [
+    "Relação monotônica (não necessariamente linear)",
+    "Variáveis ao menos ordinais",
+    "Observações independentes"
+  ],
+  "quando_usar": "Quando a relação entre variáveis não é linear ou dados não são normalmente distribuídos, como escala Likert versus rank de participação.",
+  "exemplo": "Vinte e quatro estudantes de enfermagem foram ranqueados de acordo com o tempo total dedicado a módulos de simulação. Após o curso, avaliaram sua satisfação em uma escala Likert de 1 a 5. Spearman avalia se há correlação monotônica entre engajamento e satisfação.",
+  "instrumento": {
+    "tipo": "Escala Likert de satisfação com a simulação (1 = nada satisfeito … 5 = muito satisfeito)",
+    "itens": [
+      "Realismo do cenário",
+      "Feedback do instrutor",
+      "Debriefing",
+      "Aprendizado percebido",
+      "Confiança clínica"
+    ],
+    "escore_final": "Média dos itens, arredondada (1–5)"
+  },
+  "dados_exemplo": [
+    {
+      "id_estudante": 1,
+      "rank_engajamento": 2,
+      "satisfacao_likert": 1
+    },
+    {
+      "id_estudante": 2,
+      "rank_engajamento": 15,
+      "satisfacao_likert": 4
+    },
+    {
+      "id_estudante": 3,
+      "rank_engajamento": 6,
+      "satisfacao_likert": 2
+    },
+    {
+      "id_estudante": 4,
+      "rank_engajamento": 22,
+      "satisfacao_likert": 5
+    },
+    {
+      "id_estudante": 5,
+      "rank_engajamento": 13,
+      "satisfacao_likert": 2
+    },
+    {
+      "id_estudante": 6,
+      "rank_engajamento": 23,
+      "satisfacao_likert": 4
+    },
+    {
+      "id_estudante": 7,
+      "rank_engajamento": 1,
+      "satisfacao_likert": 1
+    },
+    {
+      "id_estudante": 8,
+      "rank_engajamento": 10,
+      "satisfacao_likert": 2
+    },
+    {
+      "id_estudante": 9,
+      "rank_engajamento": 3,
+      "satisfacao_likert": 1
+    },
+    {
+      "id_estudante": 10,
+      "rank_engajamento": 8,
+      "satisfacao_likert": 1
+    },
+    {
+      "id_estudante": 11,
+      "rank_engajamento": 9,
+      "satisfacao_likert": 2
+    },
+    {
+      "id_estudante": 12,
+      "rank_engajamento": 19,
+      "satisfacao_likert": 4
+    },
+    {
+      "id_estudante": 13,
+      "rank_engajamento": 12,
+      "satisfacao_likert": 2
+    },
+    {
+      "id_estudante": 14,
+      "rank_engajamento": 7,
+      "satisfacao_likert": 1
+    },
+    {
+      "id_estudante": 15,
+      "rank_engajamento": 16,
+      "satisfacao_likert": 4
+    },
+    {
+      "id_estudante": 16,
+      "rank_engajamento": 5,
+      "satisfacao_likert": 1
+    },
+    {
+      "id_estudante": 17,
+      "rank_engajamento": 24,
+      "satisfacao_likert": 3
+    },
+    {
+      "id_estudante": 18,
+      "rank_engajamento": 20,
+      "satisfacao_likert": 3
+    },
+    {
+      "id_estudante": 19,
+      "rank_engajamento": 17,
+      "satisfacao_likert": 4
+    },
+    {
+      "id_estudante": 20,
+      "rank_engajamento": 14,
+      "satisfacao_likert": 1
+    },
+    {
+      "id_estudante": 21,
+      "rank_engajamento": 11,
+      "satisfacao_likert": 3
+    },
+    {
+      "id_estudante": 22,
+      "rank_engajamento": 21,
+      "satisfacao_likert": 5
+    },
+    {
+      "id_estudante": 23,
+      "rank_engajamento": 18,
+      "satisfacao_likert": 3
+    },
+    {
+      "id_estudante": 24,
+      "rank_engajamento": 4,
+      "satisfacao_likert": 1
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "ρ de Spearman",
+    "valor_estatistica": 0.84,
+    "p_valor": "< 0,001",
+    "itens_destaque": [
+      {
+        "rotulo": "n",
+        "valor": "24"
+      },
+      {
+        "rotulo": "Direção da associação",
+        "valor": "positiva"
+      },
+      {
+        "rotulo": "Magnitude",
+        "valor": "forte"
+      },
+      {
+        "rotulo": "Leitura prática",
+        "valor": "maior engajamento tende a acompanhar maior satisfação"
+      }
+    ]
+  },
+  "interpretacao": "Há associação monotônica positiva forte entre engajamento e satisfação. Em variáveis ordinais, o ρ de Spearman é mais apropriado do que interpretar apenas o p-valor.",
+  "planilha_exemplo": "teste_spearman_simulacao.xlsx"
+}

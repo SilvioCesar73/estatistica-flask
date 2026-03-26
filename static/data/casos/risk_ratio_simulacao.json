@@ -1,0 +1,61 @@
+{
+  "nome": "Risco relativo (RR)",
+  "descricao": "O risco relativo compara probabilidades de ocorrência do desfecho entre grupos expostos e não expostos.",
+  "tipo": "Medida de associação",
+  "requisitos": [
+    "Desfecho binário",
+    "Dados de incidência ou coorte",
+    "Leitura em probabilidade"
+  ],
+  "quando_usar": "Quando é possível calcular risco em cada grupo, como em estudos de coorte ou ensaios.",
+  "exemplo": "Avaliou-se se o uso de checklist de segurança reduz a ocorrência de omissões críticas durante a simulação.",
+  "instrumento": {
+    "tipo": "Registro de evento binário",
+    "itens": [
+      "Exposição: uso do checklist",
+      "Desfecho: omissão crítica (sim/não)"
+    ],
+    "escore_final": "Comparação do risco do evento entre grupos."
+  },
+  "dados_exemplo": [
+    {
+      "grupo": "Com checklist",
+      "evento": 6,
+      "sem_evento": 34
+    },
+    {
+      "grupo": "Sem checklist",
+      "evento": 15,
+      "sem_evento": 25
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "Risco relativo",
+    "valor_estatistica": "0,40",
+    "p_valor": "0,028",
+    "itens_destaque": [
+      {
+        "rotulo": "Risco no grupo com checklist",
+        "valor": "15,0%"
+      },
+      {
+        "rotulo": "Risco no grupo sem checklist",
+        "valor": "37,5%"
+      },
+      {
+        "rotulo": "Redução absoluta do risco",
+        "valor": "22,5 p.p."
+      },
+      {
+        "rotulo": "IC 95% do RR",
+        "valor": "0,18 a 0,91"
+      },
+      {
+        "rotulo": "n",
+        "valor": "80"
+      }
+    ]
+  },
+  "interpretacao": "O grupo com checklist apresentou 60% menos risco relativo de omissão crítica do que o grupo sem checklist neste exemplo. Como o RR ficou abaixo de 1, a exposição parece protetora.",
+  "planilha_exemplo": "risk_ratio_simulacao.xlsx"
+}

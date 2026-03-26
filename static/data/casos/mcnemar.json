@@ -1,0 +1,59 @@
+{
+  "mcnemar": {
+    "nome": "Teste de McNemar",
+    "descricao": "Teste não paramétrico usado para avaliar mudanças em respostas dicotômicas (sim/não) entre dois momentos no mesmo grupo.",
+    "exemplo": "Vinte enfermeiros de centro cirúrgico responderam antes e depois de uma oficina sobre o Checklist de Cirurgia Segura. A pergunta foi: “Você aplica o checklist completo em todas as cirurgias?”.",
+    "instrumento": {
+      "tipo": "Questionário dicotômico (Sim/Não)",
+      "itens": [
+        "Você aplica o checklist completo em todas as cirurgias?"
+      ],
+      "escore_final": "Classificação individual em Sim ou Não no pré e no pós-oficina; o McNemar considera apenas os pares que mudam de resposta."
+    },
+
+    "dados_exemplo": [
+      { "ID":  1, "Resposta Pré": "Sim",  "Resposta Pós": "Sim" },
+      { "ID":  2, "Resposta Pré": "Não", "Resposta Pós": "Sim" },
+      { "ID":  3, "Resposta Pré": "Sim",  "Resposta Pós": "Sim" },
+      { "ID":  4, "Resposta Pré": "Não", "Resposta Pós": "Não" },
+      { "ID":  5, "Resposta Pré": "Não", "Resposta Pós": "Sim" },
+      { "ID":  6, "Resposta Pré": "Sim",  "Resposta Pós": "Sim" },
+      { "ID":  7, "Resposta Pré": "Não", "Resposta Pós": "Não" },
+      { "ID":  8, "Resposta Pré": "Sim",  "Resposta Pós": "Sim" },
+      { "ID":  9, "Resposta Pré": "Não", "Resposta Pós": "Não" },
+      { "ID": 10, "Resposta Pré": "Não", "Resposta Pós": "Sim" },
+      { "ID": 11, "Resposta Pré": "Sim",  "Resposta Pós": "Sim" },
+      { "ID": 12, "Resposta Pré": "Não", "Resposta Pós": "Não" },
+      { "ID": 13, "Resposta Pré": "Sim",  "Resposta Pós": "Sim" },
+      { "ID": 14, "Resposta Pré": "Não", "Resposta Pós": "Sim" },
+      { "ID": 15, "Resposta Pré": "Sim",  "Resposta Pós": "Sim" },
+      { "ID": 16, "Resposta Pré": "Não", "Resposta Pós": "Não" },
+      { "ID": 17, "Resposta Pré": "Não", "Resposta Pós": "Sim" },
+      { "ID": 18, "Resposta Pré": "Sim",  "Resposta Pós": "Sim" },
+      { "ID": 19, "Resposta Pré": "Não", "Resposta Pós": "Não" },
+      { "ID": 20, "Resposta Pré": "Não", "Resposta Pós": "Sim" }
+    ],
+
+    "tabela_contingencia": {
+      "pre_nao_pos_nao": 6,
+      "pre_nao_pos_sim": 6,
+      "pre_sim_pos_nao": 0,
+      "pre_sim_pos_sim": 8
+    },
+
+    "estatistica_teste": {
+      "b": 0,
+      "c": 6,
+      "chi2_corrigido": 4.17,
+      "p_corrigido": 0.041,
+      "chi2_sem_correcao": 6.00,
+      "p_sem_correcao": 0.014,
+      "gl": 1
+    },
+
+    "interpretacao": "Com b = 0 e c = 6, o χ² corrigido é 4,17 (p = 0,041), indicando aumento significativo na adoção do checklist após a oficina.",
+
+    "planilha_exemplo": "/static/data/planilhas_exemplos/mcnemar.xlsx"
+  }
+}
+

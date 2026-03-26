@@ -1,0 +1,130 @@
+{
+  "nome": "Fisher exact test",
+  "descricao": "O teste exato de Fisher avalia a associação entre duas variáveis categóricas em tabelas 2×2, sendo recomendado quando as frequências esperadas são pequenas (<5).",
+  "tipo": "Teste de associação (exato)",
+  "requisitos": [
+    "Duas variáveis categóricas binárias",
+    "Amostra pequena ou frequências esperadas < 5",
+    "Observações independentes"
+  ],
+  "quando_usar": "Quando a tabela de contingência é 2×2 e uma ou mais frequências esperadas são menores que 5, como em estudos‑piloto com poucos participantes.",
+  "exemplo": "Estudantes de enfermagem foram divididos em grupo controle (aula tradicional) e grupo intervenção (simulação de alta fidelidade). Cada estudante foi classificado em **Aprovado** ou **Reprovado** num checklist clínico. O teste exato de Fisher avalia se a intervenção altera a taxa de aprovação.",
+  "instrumento": {
+    "tipo": "Checklist binário (Aprovado/Reprovado)",
+    "itens": [
+      "Avaliação das condições do paciente",
+      "Comunicação terapêutica",
+      "Administração segura de medicamentos",
+      "Prioridade de cuidados",
+      "Trabalho em equipe"
+    ],
+    "escore_final": "Aprovado se ≥ 4 dos 5 itens corretos"
+  },
+  "dados_exemplo": [
+    {
+      "grupo": "Controle",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Simulacao_AltaFidelidade",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_AltaFidelidade",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_AltaFidelidade",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_AltaFidelidade",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_AltaFidelidade",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_AltaFidelidade",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Simulacao_AltaFidelidade",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Simulacao_AltaFidelidade",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_AltaFidelidade",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_AltaFidelidade",
+      "resultado": "Reprovado"
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "Odds ratio",
+    "valor_estatistica": 1.0,
+    "p_valor": "= 1,000",
+    "itens_destaque": [
+      {
+        "rotulo": "Aprovados no controle",
+        "valor": "7"
+      },
+      {
+        "rotulo": "Reprovados no controle",
+        "valor": "3"
+      },
+      {
+        "rotulo": "Aprovados na alta fidelidade",
+        "valor": "7"
+      },
+      {
+        "rotulo": "Reprovados na alta fidelidade",
+        "valor": "3"
+      }
+    ]
+  },
+  "interpretacao": "Neste exemplo, as proporções foram idênticas entre os grupos. Por isso, além do p-valor não significativo, a razão de chances ficou em 1,00, sugerindo ausência de vantagem de um grupo sobre o outro.",
+  "planilha_exemplo": "teste_fisher_simulacao.xlsx"
+}

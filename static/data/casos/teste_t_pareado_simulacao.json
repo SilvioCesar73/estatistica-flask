@@ -1,0 +1,158 @@
+{
+  "nome": "Teste t pareado",
+  "descricao": "O teste t pareado compara as médias de duas medições relacionadas — por exemplo, desempenho antes e depois de uma intervenção sobre o **mesmo** grupo de participantes.",
+  "tipo": "Paramétrico",
+  "requisitos": [
+    "Diferença (pós − pré) aproximadamente normal",
+    "Observações emparelhadas (mesmos indivíduos)",
+    "Escala intervalar/razão"
+  ],
+  "quando_usar": "Para avaliar se uma estratégia de simulação melhora o desempenho dos **mesmos** estudantes entre pré‑teste e pós‑teste.",
+  "exemplo": "Vinte estudantes de enfermagem realizaram um pré‑teste de conhecimentos clínicos, participaram de uma simulação de alta fidelidade com debriefing estruturado, e depois fizeram um pós‑teste com as mesmas questões.",
+  "instrumento": {
+    "tipo": "Prova objetiva de 10 questões sobre cuidados críticos",
+    "itens": [
+      "Avaliação de sinais vitais",
+      "Interpretação de gasometria",
+      "Sequência rápida de intervenção",
+      "Comunicação SBAR",
+      "Prioridade de cuidados"
+    ],
+    "escore_final": "Número de acertos (0–10)"
+  },
+  "dados_exemplo": [
+    {
+      "id_estudante": 1,
+      "score_pre": 6.92,
+      "score_pos": 7.43
+    },
+    {
+      "id_estudante": 2,
+      "score_pre": 6.7,
+      "score_pos": 7.11
+    },
+    {
+      "id_estudante": 3,
+      "score_pre": 6.78,
+      "score_pos": 7.43
+    },
+    {
+      "id_estudante": 4,
+      "score_pre": 7.14,
+      "score_pos": 7.5
+    },
+    {
+      "id_estudante": 5,
+      "score_pre": 6.77,
+      "score_pos": 7.68
+    },
+    {
+      "id_estudante": 6,
+      "score_pre": 5.92,
+      "score_pos": 6.49
+    },
+    {
+      "id_estudante": 7,
+      "score_pre": 6.72,
+      "score_pos": 7.33
+    },
+    {
+      "id_estudante": 8,
+      "score_pre": 6.77,
+      "score_pos": 7.51
+    },
+    {
+      "id_estudante": 9,
+      "score_pre": 7.31,
+      "score_pos": 7.95
+    },
+    {
+      "id_estudante": 10,
+      "score_pre": 6.55,
+      "score_pos": 7.73
+    },
+    {
+      "id_estudante": 11,
+      "score_pre": 6.9,
+      "score_pos": 8.02
+    },
+    {
+      "id_estudante": 12,
+      "score_pre": 6.75,
+      "score_pos": 7.61
+    },
+    {
+      "id_estudante": 13,
+      "score_pre": 6.5,
+      "score_pos": 7.25
+    },
+    {
+      "id_estudante": 14,
+      "score_pre": 6.79,
+      "score_pos": 7.77
+    },
+    {
+      "id_estudante": 15,
+      "score_pre": 7.37,
+      "score_pos": 7.82
+    },
+    {
+      "id_estudante": 16,
+      "score_pre": 6.01,
+      "score_pos": 7.01
+    },
+    {
+      "id_estudante": 17,
+      "score_pre": 7.63,
+      "score_pos": 8.19
+    },
+    {
+      "id_estudante": 18,
+      "score_pre": 6.55,
+      "score_pos": 7.49
+    },
+    {
+      "id_estudante": 19,
+      "score_pre": 6.87,
+      "score_pos": 7.5
+    },
+    {
+      "id_estudante": 20,
+      "score_pre": 7.25,
+      "score_pos": 7.58
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "t pareado",
+    "valor_estatistica": 12.66,
+    "p_valor": "< 0,001",
+    "itens_destaque": [
+      {
+        "rotulo": "Graus de liberdade",
+        "valor": "19"
+      },
+      {
+        "rotulo": "Média pré",
+        "valor": "6,81"
+      },
+      {
+        "rotulo": "Média pós",
+        "valor": "7,52"
+      },
+      {
+        "rotulo": "Ganho médio",
+        "valor": "0,71"
+      },
+      {
+        "rotulo": "IC 95% do ganho",
+        "valor": "0,59 a 0,83"
+      },
+      {
+        "rotulo": "Tamanho de efeito (d_z)",
+        "valor": "2,83"
+      }
+    ]
+  },
+  "interpretacao": "Após a intervenção, houve aumento médio de 0,71 ponto no desempenho. O resultado sugere melhora consistente dentro do mesmo grupo, com efeito muito grande para esse conjunto de dados.",
+  "planilha_exemplo": "teste_t_pareado_simulacao.xlsx"
+}

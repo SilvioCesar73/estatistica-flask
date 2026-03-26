@@ -1,0 +1,45 @@
+{
+  "nome": "Phi",
+  "descricao": "O coeficiente Phi é uma medida de efeito para associação em tabelas 2×2.",
+  "tipo": "Medida de efeito para associação 2×2",
+  "requisitos": [
+    "Tabela 2x2",
+    "Variáveis categóricas binárias",
+    "Leitura complementar ao qui-quadrado ou Fisher"
+  ],
+  "quando_usar": "Quando se quer quantificar a magnitude da associação entre duas variáveis binárias em uma tabela 2×2.",
+  "exemplo": "Foi comparada a participação em simulação interprofissional (sim/não) com a presença de autoconfiança elevada no atendimento inicial (sim/não).",
+  "dados_exemplo": [
+    {
+      "Participou da simulação": "Sim",
+      "Autoconfiança elevada": 22,
+      "Autoconfiança não elevada": 8
+    },
+    {
+      "Participou da simulação": "Não",
+      "Autoconfiança elevada": 13,
+      "Autoconfiança não elevada": 17
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "Phi",
+    "valor_estatistica": "0,31",
+    "p_valor": "p = 0,018 no teste associado",
+    "itens_destaque": [
+      {
+        "rotulo": "χ² de Pearson",
+        "valor": "5,62"
+      },
+      {
+        "rotulo": "n",
+        "valor": "60"
+      },
+      {
+        "rotulo": "Leitura da magnitude",
+        "valor": "associação pequena a moderada"
+      }
+    ]
+  },
+  "interpretacao": "O coeficiente Phi sugere que a relação entre participação em simulação interprofissional e autoconfiança elevada tem magnitude pequena a moderada. Isso ajuda a não reduzir a interpretação apenas ao p-valor.",
+  "planilha_exemplo": "phi_simulacao.xlsx"
+}

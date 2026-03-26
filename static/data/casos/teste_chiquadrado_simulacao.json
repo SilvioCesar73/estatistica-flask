@@ -1,0 +1,254 @@
+{
+  "nome": "Qui-quadrado de Pearson",
+  "descricao": "O teste do qui‑quadrado (χ²) de Pearson verifica se existe associação entre duas variáveis categóricas. Ele compara as frequências observadas com as esperadas sob a hipótese de independência.",
+  "tipo": "Teste de associação",
+  "requisitos": [
+    "Variáveis categóricas (nominais ou ordinais)",
+    "Frequências esperadas ≥ 5 (ou usar correção/exato)",
+    "Observações independentes"
+  ],
+  "quando_usar": "Para verificar se há relação entre categoria de desempenho e tipo de metodologia de ensino, por exemplo.",
+  "exemplo": "Estudantes de enfermagem foram alocados em dois grupos: aula tradicional (controle) e simulação com briefing + debriefing (intervenção). Após a atividade, foram classificados como **Aprovado** ou **Reprovado** em um checklist de competências. O qui‑quadrado testa se o tipo de método influencia a taxa de aprovação.",
+  "instrumento": {
+    "tipo": "Checklist binário de competência clínica (Aprovado / Reprovado)",
+    "itens": [
+      "Avaliação do paciente",
+      "Comunicação",
+      "Segurança",
+      "Habilidades técnicas",
+      "Trabalho em equipe"
+    ],
+    "escore_final": "Aprovado se ≥ 80 % dos itens corretos"
+  },
+  "dados_exemplo": [
+    {
+      "grupo": "Controle",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Controle",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Reprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    },
+    {
+      "grupo": "Simulacao_Briefing_Debriefing",
+      "resultado": "Aprovado"
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "χ² de Pearson",
+    "valor_estatistica": 7.46,
+    "p_valor": "= 0,006",
+    "itens_destaque": [
+      {
+        "rotulo": "Graus de liberdade",
+        "valor": "1"
+      },
+      {
+        "rotulo": "Aprovados no controle",
+        "valor": "15"
+      },
+      {
+        "rotulo": "Aprovados na simulação",
+        "valor": "24"
+      },
+      {
+        "rotulo": "V de Cramér",
+        "valor": "0,39"
+      },
+      {
+        "rotulo": "Leitura da magnitude",
+        "valor": "moderada"
+      }
+    ]
+  },
+  "interpretacao": "A taxa de aprovação foi maior no grupo de simulação com briefing e debriefing. O χ² mostra associação entre metodologia e resultado, e o V de Cramér sugere magnitude moderada a forte nesse cenário.",
+  "planilha_exemplo": "teste_chiquadrado_simulacao.xlsx"
+}

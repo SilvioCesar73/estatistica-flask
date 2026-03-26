@@ -1,0 +1,200 @@
+{
+  "nome": "Índice Kappa de Cohen",
+  "descricao": "O coeficiente Kappa de Cohen (κ) mede a concordância entre dois avaliadores além do acaso em variáveis categóricas.",
+  "tipo": "Medida de concordância interavaliador",
+  "requisitos": [
+    "Duas avaliações independentes",
+    "Variável categórica",
+    "Mesmos casos avaliados por ambos"
+  ],
+  "quando_usar": "Para avaliar a consistência entre dois avaliadores que classificam o desempenho dos estudantes em categorias como Competente/Não competente.",
+  "exemplo": "Dois instrutores de simulação avaliaram 30 desempenhos de estudantes de enfermagem após um cenário de parada cardiorrespiratória, classificando cada estudante como Competente ou Não Competente.",
+  "instrumento": {
+    "tipo": "Checklist binário (Competente / Não competente)",
+    "itens": [
+      "Avaliação primária ABC",
+      "Início de compressões",
+      "Frequência adequada",
+      "Ventilação correta",
+      "Comunicação de equipe"
+    ],
+    "escore_final": "Competente se ≥ 4 dos 5 itens corretos"
+  },
+  "dados_exemplo": [
+    {
+      "id_estudante": 1,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 2,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 3,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 4,
+      "avaliador1": "Não_Competente",
+      "avaliador2": "Não_Competente"
+    },
+    {
+      "id_estudante": 5,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 6,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 7,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 8,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 9,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 10,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 11,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 12,
+      "avaliador1": "Não_Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 13,
+      "avaliador1": "Não_Competente",
+      "avaliador2": "Não_Competente"
+    },
+    {
+      "id_estudante": 14,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 15,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 16,
+      "avaliador1": "Competente",
+      "avaliador2": "Não_Competente"
+    },
+    {
+      "id_estudante": 17,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 18,
+      "avaliador1": "Não_Competente",
+      "avaliador2": "Não_Competente"
+    },
+    {
+      "id_estudante": 19,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 20,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 21,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 22,
+      "avaliador1": "Não_Competente",
+      "avaliador2": "Não_Competente"
+    },
+    {
+      "id_estudante": 23,
+      "avaliador1": "Não_Competente",
+      "avaliador2": "Não_Competente"
+    },
+    {
+      "id_estudante": 24,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 25,
+      "avaliador1": "Não_Competente",
+      "avaliador2": "Não_Competente"
+    },
+    {
+      "id_estudante": 26,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 27,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 28,
+      "avaliador1": "Competente",
+      "avaliador2": "Competente"
+    },
+    {
+      "id_estudante": 29,
+      "avaliador1": "Competente",
+      "avaliador2": "Não_Competente"
+    },
+    {
+      "id_estudante": 30,
+      "avaliador1": "Não_Competente",
+      "avaliador2": "Não_Competente"
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "Kappa de Cohen",
+    "valor_estatistica": 0.75,
+    "p_valor": "—",
+    "itens_destaque": [
+      {
+        "rotulo": "Concordância bruta",
+        "valor": "90,00%"
+      },
+      {
+        "rotulo": "n",
+        "valor": "30"
+      },
+      {
+        "rotulo": "Classificação",
+        "valor": "substancial"
+      },
+      {
+        "rotulo": "Leitura prática",
+        "valor": "os avaliadores concordaram bem, mesmo descontando o acaso"
+      }
+    ]
+  },
+  "interpretacao": "O Kappa mostra que a concordância entre os dois avaliadores foi substancial. Em estudos de confiabilidade, essa métrica é mais útil do que reportar só a porcentagem bruta de acertos em comum.",
+  "planilha_exemplo": "teste_kappa_simulacao.xlsx"
+}

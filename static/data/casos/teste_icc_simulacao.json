@@ -1,0 +1,122 @@
+{
+  "nome": "Correlação Intraclasse (ICC)",
+  "descricao": "A correlação intraclasse (ICC) quantifica a consistência/reprodutibilidade de medidas quantitativas feitas por vários observadores ou instrumentos sobre as mesmas unidades.",
+  "tipo": "Medida de confiabilidade",
+  "requisitos": [
+    "Múltiplas medições numéricas do mesmo conjunto de sujeitos",
+    "Observadores independentes",
+    "Escala intervalar/razão"
+  ],
+  "quando_usar": "Para avaliar a concordância entre avaliadores que atribuem pontuações numéricas ao desempenho dos estudantes em simulação.",
+  "exemplo": "Três instrutores avaliaram 12 estudantes de enfermagem após um cenário de ventilação mecânica. Cada avaliador atribuiu uma pontuação de 0 a 100. O ICC(2,1) avalia a confiabilidade interavaliador.",
+  "instrumento": {
+    "tipo": "Rubrica de desempenho numérica (0–100)",
+    "itens": [
+      "Avaliação inicial do paciente",
+      "Ajuste adequado do ventilador",
+      "Interpretação de curvas",
+      "Comunicação e trabalho em equipe",
+      "Segurança do paciente"
+    ],
+    "escore_final": "Soma ponderada das competências (0–100)"
+  },
+  "dados_exemplo": [
+    {
+      "id_estudante": 1,
+      "avaliador1": 73.0,
+      "avaliador2": 70.4,
+      "avaliador3": 77.0
+    },
+    {
+      "id_estudante": 2,
+      "avaliador1": 75.7,
+      "avaliador2": 79.1,
+      "avaliador3": 81.3
+    },
+    {
+      "id_estudante": 3,
+      "avaliador1": 72.2,
+      "avaliador2": 75.8,
+      "avaliador3": 72.5
+    },
+    {
+      "id_estudante": 4,
+      "avaliador1": 85.0,
+      "avaliador2": 85.2,
+      "avaliador3": 77.4
+    },
+    {
+      "id_estudante": 5,
+      "avaliador1": 75.6,
+      "avaliador2": 85.1,
+      "avaliador3": 83.5
+    },
+    {
+      "id_estudante": 6,
+      "avaliador1": 73.0,
+      "avaliador2": 72.7,
+      "avaliador3": 63.1
+    },
+    {
+      "id_estudante": 7,
+      "avaliador1": 68.4,
+      "avaliador2": 74.5,
+      "avaliador3": 72.2
+    },
+    {
+      "id_estudante": 8,
+      "avaliador1": 74.1,
+      "avaliador2": 77.6,
+      "avaliador3": 74.3
+    },
+    {
+      "id_estudante": 9,
+      "avaliador1": 72.6,
+      "avaliador2": 74.0,
+      "avaliador3": 76.5
+    },
+    {
+      "id_estudante": 10,
+      "avaliador1": 77.0,
+      "avaliador2": 77.8,
+      "avaliador3": 80.6
+    },
+    {
+      "id_estudante": 11,
+      "avaliador1": 73.6,
+      "avaliador2": 76.1,
+      "avaliador3": 75.3
+    },
+    {
+      "id_estudante": 12,
+      "avaliador1": 72.1,
+      "avaliador2": 71.1,
+      "avaliador3": 76.0
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "ICC(2,1)",
+    "valor_estatistica": 0.52,
+    "p_valor": "—",
+    "itens_destaque": [
+      {
+        "rotulo": "n de estudantes",
+        "valor": "12"
+      },
+      {
+        "rotulo": "n de avaliadores",
+        "valor": "3"
+      },
+      {
+        "rotulo": "Classificação",
+        "valor": "concordância moderada"
+      },
+      {
+        "rotulo": "Leitura prática",
+        "valor": "os avaliadores se aproximam, mas ainda há variabilidade relevante"
+      }
+    ]
+  },
+  "interpretacao": "O ICC sugere confiabilidade moderada entre os três avaliadores. Isso significa que o instrumento pode ser útil, mas ainda merece cuidado com treinamento e padronização da avaliação.",
+  "planilha_exemplo": "teste_icc_simulacao.xlsx"
+}

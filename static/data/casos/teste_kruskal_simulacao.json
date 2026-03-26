@@ -1,0 +1,234 @@
+{
+  "nome": "Kruskal-Wallis",
+  "descricao": "O teste de Kruskal‑Wallis (H) é a alternativa não paramétrica à ANOVA para três ou mais grupos independentes. Ele compara as distribuições quando os pressupostos de normalidade ou homogeneidade de variâncias não são atendidos.",
+  "tipo": "Não paramétrico",
+  "requisitos": [
+    "Escalas ordinais ou intervalares/razão não normais",
+    "Observações independentes",
+    "Grupos mutuamente exclusivos"
+  ],
+  "quando_usar": "Quando se deseja comparar três ou mais grupos independentes, mas os dados violam a normalidade ou há presença de outliers, por exemplo em escores de checklist com distribuição assimétrica.",
+  "exemplo": "Três turmas de estudantes de enfermagem participaram de práticas distintas: aula tradicional (controle), simulação com debriefing estruturado e simulação com briefing + debriefing avançado. Cada estudante recebeu uma pontuação (1–5) de desempenho clínico. Usou‑se Kruskal‑Wallis para verificar diferenças entre as distribuições de escores.",
+  "instrumento": {
+    "tipo": "Checklist ordinal de desempenho (1 = ruim … 5 = excelente)",
+    "itens": [
+      "Raciocínio clínico",
+      "Comunicação",
+      "Segurança do paciente",
+      "Habilidades técnicas",
+      "Trabalho em equipe"
+    ],
+    "escore_final": "Média dos 5 itens, arredondada para inteiro (1–5)"
+  },
+  "dados_exemplo": [
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 2
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 2
+    },
+    {
+      "grupo": "Controle",
+      "nota": 2
+    },
+    {
+      "grupo": "Controle",
+      "nota": 4
+    },
+    {
+      "grupo": "Controle",
+      "nota": 4
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 4
+    },
+    {
+      "grupo": "Controle",
+      "nota": 4
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 4
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 3
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 4
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 5
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 4
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 5
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 4
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 4
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 3
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 4
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 4
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 3
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 3
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 4
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 5
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 5
+    },
+    {
+      "grupo": "Simulação_Debriefing",
+      "nota": 4
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 5
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 5
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 4
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 5
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 5
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 4
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 5
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 5
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 4
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 5
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 4
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 5
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 4
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 5
+    },
+    {
+      "grupo": "Simulação_Briefing_Debriefing",
+      "nota": 4
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "H de Kruskal-Wallis",
+    "valor_estatistica": 20.94,
+    "p_valor": "< 0,001",
+    "itens_destaque": [
+      {
+        "rotulo": "Graus de liberdade",
+        "valor": "2"
+      },
+      {
+        "rotulo": "Mediana do controle",
+        "valor": "3"
+      },
+      {
+        "rotulo": "Mediana da simulação com debriefing",
+        "valor": "4"
+      },
+      {
+        "rotulo": "Mediana da simulação com briefing + debriefing",
+        "valor": "5"
+      },
+      {
+        "rotulo": "Epsilon²",
+        "valor": "0,45"
+      }
+    ]
+  },
+  "interpretacao": "Pelo menos um dos grupos apresentou distribuição de escores diferente dos demais. As medianas sugerem gradiente favorável às estratégias com simulação, sobretudo quando há briefing e debriefing.",
+  "planilha_exemplo": "teste_kruskal_simulacao.xlsx"
+}

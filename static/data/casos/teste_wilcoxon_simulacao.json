@@ -1,0 +1,144 @@
+{
+  "nome": "Wilcoxon signed-rank",
+  "descricao": "O teste de Wilcoxon para amostras pareadas é a alternativa não paramétrica ao t pareado. Ele avalia se a distribuição das diferenças mediana entre duas medições relacionadas difere de zero.",
+  "tipo": "Não paramétrico",
+  "requisitos": [
+    "Diferenças simétricas em torno da mediana",
+    "Observações pareadas (mesmos indivíduos)",
+    "Dados ao menos ordinais"
+  ],
+  "quando_usar": "Quando se comparam pré‑ e pós‑testes do mesmo grupo, mas a normalidade não é garantida ou há muitos outliers.",
+  "exemplo": "Dezoito estudantes de enfermagem fizeram um teste de conhecimentos antes e depois de participarem de uma simulação de parada cardiorrespiratória em realidade virtual.",
+  "instrumento": {
+    "tipo": "Prova de 20 questões de suporte básico de vida",
+    "itens": [
+      "Reconhecimento de PCR",
+      "Compressões torácicas",
+      "Ventilação de resgate",
+      "Desfibrilação DEA",
+      "Sequência de segurança"
+    ],
+    "escore_final": "Pontuação total (0–20)"
+  },
+  "dados_exemplo": [
+    {
+      "id_estudante": 1,
+      "score_pre": 59,
+      "score_pos": 73
+    },
+    {
+      "id_estudante": 2,
+      "score_pre": 67,
+      "score_pos": 77
+    },
+    {
+      "id_estudante": 3,
+      "score_pre": 61,
+      "score_pos": 74
+    },
+    {
+      "id_estudante": 4,
+      "score_pre": 60,
+      "score_pos": 65
+    },
+    {
+      "id_estudante": 5,
+      "score_pre": 56,
+      "score_pos": 66
+    },
+    {
+      "id_estudante": 6,
+      "score_pre": 59,
+      "score_pos": 67
+    },
+    {
+      "id_estudante": 7,
+      "score_pre": 62,
+      "score_pos": 70
+    },
+    {
+      "id_estudante": 8,
+      "score_pre": 61,
+      "score_pos": 70
+    },
+    {
+      "id_estudante": 9,
+      "score_pre": 62,
+      "score_pos": 75
+    },
+    {
+      "id_estudante": 10,
+      "score_pre": 58,
+      "score_pos": 72
+    },
+    {
+      "id_estudante": 11,
+      "score_pre": 55,
+      "score_pos": 67
+    },
+    {
+      "id_estudante": 12,
+      "score_pre": 74,
+      "score_pos": 87
+    },
+    {
+      "id_estudante": 13,
+      "score_pre": 70,
+      "score_pos": 84
+    },
+    {
+      "id_estudante": 14,
+      "score_pre": 52,
+      "score_pos": 64
+    },
+    {
+      "id_estudante": 15,
+      "score_pre": 72,
+      "score_pos": 83
+    },
+    {
+      "id_estudante": 16,
+      "score_pre": 65,
+      "score_pos": 79
+    },
+    {
+      "id_estudante": 17,
+      "score_pre": 52,
+      "score_pos": 60
+    },
+    {
+      "id_estudante": 18,
+      "score_pre": 66,
+      "score_pos": 71
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "W de Wilcoxon",
+    "valor_estatistica": 0.0,
+    "p_valor": "< 0,001",
+    "itens_destaque": [
+      {
+        "rotulo": "Mediana pré",
+        "valor": "61"
+      },
+      {
+        "rotulo": "Mediana pós",
+        "valor": "71,5"
+      },
+      {
+        "rotulo": "Z aproximado",
+        "valor": "3,73"
+      },
+      {
+        "rotulo": "Tamanho de efeito (r)",
+        "valor": "0,88"
+      },
+      {
+        "rotulo": "Diferença mediana",
+        "valor": "11,5"
+      }
+    ]
+  },
+  "interpretacao": "As pontuações pós-intervenção ficaram sistematicamente acima das pontuações pré. A estatística W, acompanhada do tamanho de efeito r, mostra que a mudança foi consistente e forte para este conjunto de dados.",
+  "planilha_exemplo": "teste_wilcoxon_simulacao.xlsx"
+}

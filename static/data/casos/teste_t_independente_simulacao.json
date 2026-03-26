@@ -1,0 +1,139 @@
+{
+  "nome": "Teste t independente",
+  "descricao": "O teste t independente é utilizado para comparar a média de dois grupos independentes. Neste exemplo, avaliamos se uma estratégia de simulação melhora o desempenho dos alunos em relação ao grupo controle.",
+  "tipo": "Paramétrico",
+  "requisitos": [
+    "Variável numérica contínua",
+    "Distribuição aproximadamente normal",
+    "Homogeneidade das variâncias",
+    "Observações independentes entre os grupos"
+  ],
+  "quando_usar": "Quando se deseja comparar médias de dois grupos diferentes, como controle vs intervenção.",
+  "exemplo": "Um grupo de estudantes participou de uma simulação clínica estruturada. Outro grupo seguiu o método tradicional. As notas de ambos foram comparadas para verificar se a simulação teve impacto significativo.",
+  "instrumento": {
+    "tipo": "Checklist de avaliação de desempenho clínico",
+    "itens": [
+      "Avaliação do raciocínio clínico",
+      "Tomada de decisão",
+      "Comunicação com o paciente",
+      "Execução das intervenções",
+      "Organização e tempo"
+    ],
+    "escore_final": "Soma dos itens, variando de 0 a 10 pontos"
+  },
+  "dados_exemplo": [
+    {
+      "grupo": "Controle",
+      "nota": 6.2
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.5
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.8
+    },
+    {
+      "grupo": "Controle",
+      "nota": 7.0
+    },
+    {
+      "grupo": "Controle",
+      "nota": 7.1
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.9
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.4
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.6
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.3
+    },
+    {
+      "grupo": "Controle",
+      "nota": 6.7
+    },
+    {
+      "grupo": "Intervenção",
+      "nota": 7.8
+    },
+    {
+      "grupo": "Intervenção",
+      "nota": 8.0
+    },
+    {
+      "grupo": "Intervenção",
+      "nota": 7.9
+    },
+    {
+      "grupo": "Intervenção",
+      "nota": 8.1
+    },
+    {
+      "grupo": "Intervenção",
+      "nota": 7.6
+    },
+    {
+      "grupo": "Intervenção",
+      "nota": 8.3
+    },
+    {
+      "grupo": "Intervenção",
+      "nota": 8.2
+    },
+    {
+      "grupo": "Intervenção",
+      "nota": 7.7
+    },
+    {
+      "grupo": "Intervenção",
+      "nota": 7.9
+    },
+    {
+      "grupo": "Intervenção",
+      "nota": 8.0
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "t",
+    "valor_estatistica": -11.03,
+    "p_valor": "< 0,001",
+    "itens_destaque": [
+      {
+        "rotulo": "Graus de liberdade",
+        "valor": "18"
+      },
+      {
+        "rotulo": "Média do controle",
+        "valor": "6,65"
+      },
+      {
+        "rotulo": "Média da intervenção",
+        "valor": "7,95"
+      },
+      {
+        "rotulo": "Diferença média",
+        "valor": "1,30"
+      },
+      {
+        "rotulo": "IC 95% da diferença",
+        "valor": "1,05 a 1,55"
+      },
+      {
+        "rotulo": "Tamanho de efeito (d de Cohen)",
+        "valor": "4,93"
+      }
+    ]
+  },
+  "interpretacao": "As notas do grupo intervenção foram mais altas que as do controle. A diferença média foi de 1,30 ponto, com efeito muito grande (d de Cohen = 4,93), indicando vantagem clara da estratégia com simulação neste exemplo.",
+  "planilha_exemplo": "teste_t_independente_simulacao.xlsx"
+}

@@ -1,0 +1,28 @@
+Revisão dos requirements em 2026-03-25
+
+Arquivo principal agora está enxuto e alinhado ao uso real do back-end atual.
+
+Dependências mantidas em requirements.txt:
+- Flask
+- Flask-SQLAlchemy
+- Werkzeug
+- numpy
+- scipy
+
+Itens removidos do arquivo principal por estarem inflados ou por serem dependências transitivas / não usadas diretamente no estado atual do projeto:
+- pandas
+- blinker
+- click
+- colorama
+- greenlet
+- itsdangerous
+- Jinja2
+- MarkupSafe
+- python-dateutil
+- pytz
+- six
+- SQLAlchemy
+- typing_extensions
+- tzdata
+
+Observação: o arquivo requirements-completo-legado.txt foi mantido apenas como referência da versão anterior.

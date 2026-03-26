@@ -1,0 +1,53 @@
+{
+  "nome": "V de Cramer",
+  "descricao": "O V de Cramer quantifica a força da associação entre variáveis categóricas em tabelas de contingência.",
+  "tipo": "Medida de efeito para associação categórica",
+  "requisitos": [
+    "Tabela de contingência",
+    "Teste de associação entre categorias",
+    "Leitura complementar ao qui-quadrado"
+  ],
+  "quando_usar": "Quando se quer interpretar a magnitude da associação entre variáveis categóricas após um qui-quadrado.",
+  "exemplo": "Foi avaliada a associação entre tipo de treinamento em simulação (presencial, híbrido, virtual) e nível de satisfação final (baixa, moderada, alta).",
+  "dados_exemplo": [
+    {
+      "Treinamento": "Presencial",
+      "Baixa": 2,
+      "Moderada": 7,
+      "Alta": 16
+    },
+    {
+      "Treinamento": "Híbrido",
+      "Baixa": 4,
+      "Moderada": 10,
+      "Alta": 11
+    },
+    {
+      "Treinamento": "Virtual",
+      "Baixa": 7,
+      "Moderada": 12,
+      "Alta": 6
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "V de Cramer",
+    "valor_estatistica": "0,34",
+    "p_valor": "p = 0,012 no teste qui-quadrado associado",
+    "itens_destaque": [
+      {
+        "rotulo": "χ² de Pearson",
+        "valor": "12,68"
+      },
+      {
+        "rotulo": "Graus de liberdade",
+        "valor": "4"
+      },
+      {
+        "rotulo": "Leitura da magnitude",
+        "valor": "associação de magnitude moderada"
+      }
+    ]
+  },
+  "interpretacao": "Neste exemplo, o V de Cramer mostra que a associação entre tipo de treinamento e satisfação não é apenas significativa, mas também apresenta magnitude moderada, o que ajuda a traduzir o resultado para a prática.",
+  "planilha_exemplo": "v_cramer_simulacao.xlsx"
+}

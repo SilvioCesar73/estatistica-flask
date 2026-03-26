@@ -1,0 +1,47 @@
+{
+  "nome": "d de Cohen",
+  "descricao": "O d de Cohen é uma medida de efeito para diferenças entre médias. Ele ajuda a interpretar a magnitude prática da diferença observada.",
+  "tipo": "Medida de efeito para comparação entre grupos",
+  "requisitos": [
+    "Comparação entre médias",
+    "Desfecho numérico",
+    "Leitura complementar ao teste inferencial"
+  ],
+  "quando_usar": "Quando se deseja estimar a magnitude de uma diferença entre grupos ou momentos, além do p-valor.",
+  "exemplo": "Dois grupos de estudantes foram comparados após uma simulação de parada cardiorrespiratória: um grupo recebeu debriefing estruturado e o outro, debriefing breve. O desfecho foi o escore de desempenho prático.",
+  "dados_exemplo": [
+    {
+      "Grupo": "Debriefing estruturado",
+      "n": 20,
+      "Média": 84.2,
+      "Desvio-padrão": 8.1
+    },
+    {
+      "Grupo": "Debriefing breve",
+      "n": 20,
+      "Média": 76.0,
+      "Desvio-padrão": 8.3
+    }
+  ],
+  "estatisticas": {
+    "nome_estatistica": "d de Cohen",
+    "valor_estatistica": "0,99",
+    "p_valor": "complementa o teste principal",
+    "itens_destaque": [
+      {
+        "rotulo": "Diferença média",
+        "valor": "8,2 pontos"
+      },
+      {
+        "rotulo": "Leitura da magnitude",
+        "valor": "efeito grande"
+      },
+      {
+        "rotulo": "IC 95%",
+        "valor": "0,31 a 1,65"
+      }
+    ]
+  },
+  "interpretacao": "O d de Cohen indica que a diferença entre os grupos não foi apenas estatisticamente detectável, mas também grande o bastante para ter relevância educacional prática neste exemplo.",
+  "planilha_exemplo": "cohen_d_simulacao.xlsx"
+}
